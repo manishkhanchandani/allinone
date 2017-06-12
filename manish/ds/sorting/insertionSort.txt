@@ -1,0 +1,25 @@
+Insertion sort complexity is O(n square) which is same as Bubble sort but perform a bit better than it. It is the way we arrange our playing cards. We keep a sorted subarray. Each value is inserted into its proper position iin the sorted sub-array in the left of it.
+
+Example
+Array is 5, 6, 2, 4, 7, 3, 1
+
+Step 1: Insert 5
+5, 6, 2, 4, 7, 3, 1
+
+Step 2: Insert 6
+5, 6, 2, 4, 7, 3, 1
+
+Step 3: Insert 2
+2, 5, 6, 4, 7, 3, 1
+
+Step 4: Insert 4
+2, 4, 5, 6, 7, 3, 1
+
+Step 5: Insert 7
+2, 4, 5, 6, 7, 3, 1
+
+Step 6: Insert 3
+2, 3, 4, 5, 6, 7, 1
+
+Step 7: Insert 1
+1, 2, 3, 4, 5, 6, 7
