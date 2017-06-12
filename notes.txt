@@ -1,0 +1,38 @@
+Server Behavior is showing Insert Record in the box
+
+Dreamweaver creates hidden input field, MM_insert
+
+Now when page loads, it will show the form, user will fill the form and when user submits the form, the data is sent to the server,
+
+PHP server,
+
+when form is submitted, it goes  to the server either as POST or as GET
+
+
+GET method, when form is submitted, it will show in url as following:
+
+http://blah.com/?keyword=chess&title=my+title
+
+$_GET['kw']
+
+$_GET['title']
+
+Post will send the data to the server in hidden part of browser.
+
+
+
+
+Create a new page
+we added recordset, conn, choose table, rest default settings
+insert -> dynamic data -> dynamic table
+insert -> record set paging -> recordset navigation bar
+insert -> display record count
+
+created text -> show region -> show if recordset is empty
+
+and i selected all above 3 sections and show if recordset is not empty.
+
+
+https://git-scm.com/download/win
+
+https://tortoisegit.org/download/
