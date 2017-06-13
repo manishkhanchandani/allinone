@@ -10,7 +10,7 @@ if (isset($_GET['pageNum_rsUser'])) {
 $startRow_rsUser = $pageNum_rsUser * $maxRows_rsUser;
 
 mysql_select_db($database_conn, $conn);
-$query_rsUser = "SELECT * FROM first_table";
+$query_rsUser = "SELECT * FROM first_table ORDER BY first_name ASC";
 $query_limit_rsUser = sprintf("%s LIMIT %d, %d", $query_rsUser, $startRow_rsUser, $maxRows_rsUser);
 $rsUser = mysql_query($query_limit_rsUser, $conn) or die(mysql_error());
 $row_rsUser = mysql_fetch_assoc($rsUser);
