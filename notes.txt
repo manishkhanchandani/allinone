@@ -40,6 +40,67 @@ https://tortoisegit.org/download/
 
 Abhash.malviya08@gmail.com
 design9992@gmail.com
-carrieparecki@gmail.co
+carrieparecki@gmail.com
+
+1. URL Parameter
+	$_GET['keyword']
+	
+	
+2. Form Variable
+	$_POST['var1']
+	$_POST['var2']
+	$_POST['var3']
+
+3. Cookie
+	$_COOKIE['var1'];
+	
+4. Session
+	$_SESSION['var1'];
+
+5. Server variables
+	$_SERVER['var1'];
+	
+6. Entered Variable
+	sell
+
+
+User registration
+	login name
+	password
+	
+	sucess, your username and password is correct, 
+	i loose the information when i go from one page to another page
+	
+	and keep the information stored somewhere, we use cookies or session.
+	
+	session exist till browser is open
+	cookie can be stored for n number of days or years.
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
