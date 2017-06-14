@@ -6,15 +6,15 @@ function InsertionSort(array) {
 	this.arr = array;	
 }
 
-InsertionSort.prototype.more = function(value1, value2) {
+InsertionSort.prototype.more = function (value1, value2) {
 	return value1 > value2;
-}
+};
 
-InsertionSort.prototype.less = function(value1, value2) {
+InsertionSort.prototype.less = function (value1, value2) {
 	return value1 < value2;
-}
+};
 
-InsertionSort.prototype.sortExplanation = function() {
+InsertionSort.prototype.sortExplanation = function () {
 	console.log('array is ', this.arr);
 
 	var size = this.arr.length;
