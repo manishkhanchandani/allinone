@@ -15,17 +15,21 @@ $totalRows_rsCategories = mysql_num_rows($rsCategories);
 
 <body>
 <h1>Categories </h1>
-<table width="100%" border="1">
+<table width="50%" border="1">
   <tr>
     <td><strong>id</strong></td>
     <td><strong>category</strong></td>
     <td><strong>sorting</strong></td>
+    <td>Edit</td>
+    <td>Delete</td>
   </tr>
   <?php do { ?>
     <tr>
       <td><?php echo $row_rsCategories['id']; ?></td>
       <td><?php echo $row_rsCategories['category']; ?></td>
       <td><?php echo $row_rsCategories['sorting']; ?></td>
+      <td><a href="edit1.php?id=<?php echo $row_rsCategories['id']; ?>">Edit</a></td>
+      <td>&nbsp;</td>
     </tr>
     <?php } while ($row_rsCategories = mysql_fetch_assoc($rsCategories)); ?>
 </table>
