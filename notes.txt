@@ -39,6 +39,9 @@ https://tortoisegit.org/download/
 
 
 Abhash.malviya08@gmail.com
+
+
+
 design9992@gmail.com
 carrieparecki@gmail.com
 
@@ -77,25 +80,161 @@ User registration
 	cookie can be stored for n number of days or years.
 	
 	
+Width of Div tag or any element = Width + Padding + Border Width + Margin
+279px + 10px + 10px + 1px
+600px div will look like 700px
+
+
+Programming
+	if else
+	switch case
+	Ternary operator, if else, 
+	
+	for loop
+	while loop
+	
+	&&, ||, !
+	
+	>, < ==, >= <=, %
+	
+	function, object, 
+
+
+Insert
+	2 ways to insert
+	
+Recordet
+	Browsing, all records, or use filter, and sorting
+	paganition
+	Records 1 to 2 of 4 , navigation of pagination
+	
+Edit
+	Step 1: Create a new page called as edit1.php
+	Step 2: Create a recordset for particular record or particular id
+	Step 3: Create a edit form and apply php code
+	Step 4: Create a link on the browse page which will send user to edit page.
+	Step 5: Redirect user back to browse page after edit.
 	
 
+Delete
+
+Log In on Website
+
+Register on Website
+
+Logout
+
+Restrict access to webpage
+
+
+Idea about my first website
 
 
 
+LIFE REMINDER
+
+Every person has life insurance, but no body in this world has life reminder.
+
+Reminder, phone number and email address of your son, put some message in the text box, 
+once in every month,3 months, consider dead, and my website send message to your loved one's 
+
+
+MY VIEWS
+Person has views
+	you come to my website - you put your views, 1000, carrie religion, kate, followers,, 
+		kate - carrie, follow carrie
+		
+		500 of kate, kate religion
+	
+	
+	Politician, Hilary all her views, follow
+	
+	
+REMEDY FINDER
+
+	Carrie	Headache (chronic, since 10 years) Acupuncture -> Relieved, no more headache, she will be excited.
+	
+		Disease: Headache
+		Treatment: Allopathy, Ayurvedic, Acupuncture, Homeopathy, Reiki, Magnet Therapies
+		What treatment she did: needles were put in forehead, one in hand, one leg, she did
+		Rating: +++++
+		Submit
+		
+		kate, really you got cured, 
+			yes, i got cured, it is fact
+		
+		
+	Kate on website, she is having headache, kate to find acunpuncturist near her area
+
+
+Advertisement - paid
 
 
 
+Padding & Margin
+
+padding: 25px 20px 15px 10px; // top, right, bottom, left like a clockwise
+padding: 25px 20px 15px;//top, right & left, bottom
+padding: 25px 20px; //top & bottom are 25px, where as right and left are 20px
+padding: 25px; // padding to all the sides.
 
 
+border-style: dotted;
+border-width: thin;
+border-color: #0033CC;
+
+border-top-style: dotted;
+border-right-style: dashed;
+border-bottom-style: solid;
+border-left-style: double;
+border-top-width: thin;
+border-right-width: medium;
+border-bottom-width: thick;
+border-left-width: 10px;
+border-top-color: #0033CC;
+border-right-color: #00CCFF;
+border-bottom-color: #993300;
+border-left-color: #99CC66;
+
+border: 12px double red;
 
 
+Syntax
+	for (Starting Position; Ending Position; Middle position) {
+	
+	}
+
+What is meaning of i++ and i--
+
+i++ is called increment operator
+i-- is called decrement operator
+
+var i = 0;
+i++; (i = i + 1;)
+i++;
+now what is the value of i: 2
+i--
 
 
+<script>
+var myArray = [];
 
+myArray.push('manny'); //myArray[0]
+myArray.push('carrie'); //myArray[1]
+myArray.push('kate'); //myArray[2]
+myArray.push('neeta'); //myArray[3]
+myArray.push('kavita'); //myArray[4]
 
+console.log('total items in array are: ', myArray.length);
 
+for (var j = 0; j < myArray.length; j++) {
+	console.log('the name at position: ', j, ' is ', myArray[j]);
+}
 
-
+for (var i = 0; i < 10; i++) {
+	console.log('value of i is ', i);
+}
+</script>
 
 
 

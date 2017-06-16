@@ -56,6 +56,8 @@ $queryString_rsUser = sprintf("&totalRows_rsUser=%d%s", $totalRows_rsUser, $quer
       <td><strong>Gender</strong></td>
       <td><strong>Description</strong></td>
       <td><strong>Marital Status </strong></td>
+      <td>Edit</td>
+      <td>Delete</td>
     </tr>
     <?php do { ?>
       <tr>
@@ -65,11 +67,13 @@ $queryString_rsUser = sprintf("&totalRows_rsUser=%d%s", $totalRows_rsUser, $quer
         <td><?php echo $row_rsUser['gender']; ?></td>
         <td><?php echo $row_rsUser['description']; ?></td>
         <td><?php echo $row_rsUser['marital_status']; ?></td>
+        <td><a href="browse1Edit.php?user_id=<?php echo $row_rsUser['user_id']; ?>">Edit</a></td>
+        <td>Delete</td>
       </tr>
       <?php } while ($row_rsUser = mysql_fetch_assoc($rsUser)); ?>
       </table>
   <p> Records <?php echo ($startRow_rsUser + 1) ?> to <?php echo min($startRow_rsUser + $maxRows_rsUser, $totalRows_rsUser) ?> of <?php echo $totalRows_rsUser ?>
-      <table border="0" width="50%" align="center">
+  <table border="0" width="50%" align="center">
         <tr>
           <td width="23%" align="center"><?php if ($pageNum_rsUser > 0) { // Show if not first page ?>
                 <a href="<?php printf("%s?pageNum_rsUser=%d%s", $currentPage, 0, $queryString_rsUser); ?>">First</a>
@@ -88,7 +92,7 @@ $queryString_rsUser = sprintf("&totalRows_rsUser=%d%s", $totalRows_rsUser, $quer
                 <?php } // Show if not last page ?>
           </td>
         </tr>
-      </table>
+  </table>
   <?php } // Show if recordset not empty ?></p>
 <?php if ($totalRows_rsUser == 0) { // Show if recordset empty ?>
   <p>No User Available. </p>
