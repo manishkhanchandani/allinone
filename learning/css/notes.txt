@@ -1,3 +1,290 @@
+Display
+
+The display property is the most important CSS property for controlling layout.
+
+The display Property
+The display property specifies if/how an element is displayed.
+
+Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+
+Block-level Elements
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+
+The <div> element is a block-level element.
+Examples of block-level elements:
+
+<div>
+<h1> - <h6>
+<p>
+<form>
+<header>
+<footer>
+<section>
+Inline Elements
+An inline element does not start on a new line and only takes up as much width as necessary.
+
+This is an inline <span> element inside a paragraph.
+
+Examples of inline elements:
+
+<span>
+<a>
+<img>
+Display: none;
+display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.
+
+The <script> element uses display: none; as default. 
+
+Override The Default Display Value
+As mentioned, every element has a default display value. However, you can override this.
+
+Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.
+
+A common example is making inline <li> elements for horizontal menus:
+
+Example
+li {
+    display: inline;
+}
+
+Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
+
+The following example displays <span> elements as block elements:
+
+Example
+span {
+    display: block;
+}
+
+
+The following example displays <a> elements as block elements:
+
+Example
+a {
+    display: block;
+}
+
+
+Hide an Element - display:none or visibility:hidden?
+
+Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
+
+Example
+h1.hidden {
+    display: none;
+}
+
+visibility:hidden; also hides an element.
+
+However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
+
+Example
+h1.hidden {
+    visibility: hidden;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#panel, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border: solid 1px #a6d8a8;
+    margin: auto;
+}
+
+#panel {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<p class="flip" onclick="myFunction()">Click to show panel</p>
+
+<div id="panel">
+  <p>This panel contains a div element, which is hidden by default (display: none).</p>
+  <p>It is styled with CSS and we use JavaScript to show it (display: block).</p>
+  <p>How it works: Notice that the p element with class="flip" has an onclick attribute attached to it. When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
+  <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+</div>
+
+<script>
+function myFunction() {
+    document.getElementById("panel").style.display = "block";
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.imgbox {
+    float: left;
+    text-align: center;
+    width: 120px;
+    border: 1px solid gray;
+    margin: 4px;
+    padding: 6px;
+}
+
+button {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h3>Difference between display:none and visiblity: hidden</h3>
+<p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
+<p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+
+<div class="imgbox" id="imgbox1">Box 1<br>
+  <img src="img_fjords.jpg" alt="Fjords" style="width:100%">
+  <button onclick="removeElement()">Remove</button>
+</div>
+<div class="imgbox" id="imgbox2">Box 2<br>
+  <img src="img_lights.jpg" alt="Lights" style="width:100%">
+  <button onclick="changeVisibility()">Hide</button>
+</div>
+<div class="imgbox">Box 3<br>
+  <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  <button onclick="resetElement()">Reset All</button>
+</div>
+
+<script>
+function removeElement() {
+    document.getElementById("imgbox1").style.display = "none";
+}
+
+function changeVisibility() {
+    document.getElementById("imgbox2").style.visibility = "hidden";
+}
+
+function resetElement() {
+    document.getElementById("imgbox1").style.display = "block";
+    document.getElementById("imgbox2").style.visibility = "visible";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+CSS Overflow
+The CSS overflow property specifies whether to clip content or to add scrollbars when the content of an element is too big to fit in a specified area.
+
+This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+The overflow property has the following values:
+
+visible - Default. The overflow is not clipped. It renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, but a scrollbar is added to see the rest of the content
+auto - If overflow is clipped, a scrollbar should be added to see the rest of the content
+Note: The overflow property only works for block elements with a specified height.
+
+Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
+
+overflow: visible
+By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+    width: 200px;
+    height: 50px;
+    background-color: #eee;
+    overflow: visible;
+}
+Try it Yourself »
+overflow: hidden
+With the hidden value, the overflow is clipped, and the rest of the content is hidden:
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+    overflow: hidden;
+}
+Try it Yourself »
+overflow: scroll
+Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+    overflow: scroll;
+}
+Try it Yourself »
+overflow: auto
+The auto value is similar to scroll, only it add scrollbars when necessary:
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+    overflow: auto;
+}
+Try it Yourself »
+overflow-x and overflow-y
+The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+
+overflow-x specifies what to do with the left/right edges of the content.
+overflow-y specifies what to do with the top/bottom edges of the content.
+
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+All CSS Overflow Properties
+Property	Description
+overflow	Specifies what happens if content overflows an element's box
+overflow-x	Specifies what to do with the left/right edges of the content if it overflows the element's content area
+overflow-y	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area
+
+
+
+
+
+
+
+
+
+CSS Layout - float and clear
+❮ PreviousNext ❯
+The float property specifies whether or not an element should float.
+
+The clear property is used to control the behavior of floating elements.
+
+
+
+The float Property
+In its simplest use, the float property can be used to wrap text around images.
+
+The following example specifies that an image should float to the right in a text:
+
+Example
+img {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+Try it Yourself »
 The clear Property
 The clear property is used to control the behavior of floating elements.
 
@@ -9,8 +296,7 @@ Example
 div {
     clear: left;
 }
-
-
+Try it Yourself »
 The clearfix Hack
 If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.
 
@@ -20,37 +306,490 @@ Example
 .clearfix {
     overflow: auto;
 }
+Try it Yourself »
+The overflow:auto clearfix works well as long as you are able to keep control of your margins and padding (else you might see scrollbars). The new, modern clearfix hack however, is safer to use, and the following code is used for most webpages:
 
-Example:
+Example
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+Try it Yourself »
+You will learn more about the ::after pseudo-element in a later chapter.
 
+Web Layout Example
+It is common to do entire web layouts using the float property:
+
+
+Example
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+
+.column {
+    float: left;
+    padding: 15px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menu {
+    width: 25%;
+}
+
+.content {
+    width: 75%;
+}
+Try it Yourself »
+More Examples
+An image with border and margins that floats to the right in a paragraph
+Let an image float to the right in a paragraph. Add border and margins to the image.
+
+An image with a caption that floats to the right
+Let an image with a caption float to the right.
+
+Let the first letter of a paragraph float to the left
+Let the first letter of a paragraph float to the left and style the letter.
+
+Creating a horizontal menu
+Use float with a list of hyperlinks to create a horizontal menu.
+
+Creating a homepage without tables
+Use float to create a homepage with a navbar, header, footer, left content and main content.
+
+All CSS Float Properties
+Property	Description
+clear	Specifies on which sides of an element where floating elements are not allowed to float
+float	Specifies whether or not an element should float
+overflow	Specifies what happens if content overflows an element's box
+overflow-x	Specifies what to do with the left/right edges of the content if it overflows the element's content area
+overflow-y	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area
+
+
+
+Examples on float
+
+<!DOCTYPE html>
+<html>
+<head>
 <style>
-div {
-    border: 3px solid #73AD21;
-}
-
-.img1 {
+img {
     float: right;
-}
-
-.clearfix {
-    overflow: auto;
-}
-
-.img2 {
-    float: right;
+    border: 1px dotted black;
+    margin: 0px 0px 15px 20px;
 }
 </style>
+</head>
+<body>
+
+<p>In the paragraph below, the image will float to the right. A dotted black border is added to the image. 
+We have also added margins to the image to push the text away from the image:
+0 px margin on the top and right side, 15 px margin on the bottom, and 20 px margin on the left side of the image.
+</p>
+
+<p><img src="w3css.gif" width="100" height="140">
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+
+</body>
+</html>
 
 
-<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
 
-<div><img class="img1" src="w3css.gif" alt="W3Schools.com" width="100" height="140">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    float: right;
+    width: 120px;
+    margin: 0 0 15px 20px;
+    padding: 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+</style>
+</head>
+<body>
 
-<p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+<div>
+<img src="w3css.gif" width="100" height="140"><br>CSS is fun!
+</div>
 
-<div class="clearfix"><img class="img2" src="w3css.gif" alt="W3Schools.com" width="100" height="140">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+<p>
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+
+<p>
+In the paragraph above, the div element is 120 pixels wide and it contains the image.
+The div element will float to the right. Margins are added to the div to push the text away from the div.
+Borders and padding are added to the div to frame in the picture and the caption.
+</p>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span {
+    float: left;
+    width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;
+}
+</style>
+</head>
+<body>
+
+<p>
+<span>T</span>his is some text.
+This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+
+<p>
+In the paragraph above, the first letter of the text is embedded in a span element.
+The span element has a width that is 0.7 times the size of the current font.
+The font-size of the span element is 400% (quite large) and the line-height is 80%.
+The font of the letter in the span will be in "Algerian".
+</p>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.header {
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.footer {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+}
+.topmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #777;
+}
+.topmenu li {
+    float: left;
+}
+.topmenu li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.topmenu li a:hover {
+    background-color: #222;
+}
+.topmenu li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.sidemenu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.sidemenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sidemenu li a {
+    margin-bottom: 4px;
+    display: block;
+    padding: 8px;
+    background-color: #eee;
+    text-decoration: none;
+    color: #666;
+}
+.sidemenu li a:hover {
+    background-color: #555;
+    color: white;
+}
+.sidemenu li a.active {
+    background-color: #008CBA;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<ul class="topmenu">
+  <li><a href="#home" class="active">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div class="clearfix">
+  <div class="column sidemenu">
+    <ul>
+      <li><a href="#flight">The Flight</a></li>
+      <li><a href="#city" class="active">The City</a></li>
+      <li><a href="#island">The Island</a></li>
+      <li><a href="#food">The Food</a></li>
+      <li><a href="#people">The People</a></li>
+      <li><a href="#history">The History</a></li>
+      <li><a href="#oceans">The Oceans</a></li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <div class="header">
+      <h1>The City</h1>
+    </div>
+    <h1>Chania</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about responsive web pages in a later chapter.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+</html>
+
+
+
+CSS Layout - inline-block
+❮ PreviousNext ❯
+The inline-block Value
+It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property.
+
+However, the inline-block value of the display property makes this even easier.
+
+inline-block elements are like inline elements but they can have a width and a height.
+
+Examples
+The old way - using float (notice that we also need to specify a clear property for the element after the floating boxes):
+
+Example
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21; 
+}
+
+.after-box {
+    clear: left;
+}
+Try it Yourself »
+The same effect can be achieved by using the inline-block value of the display property (notice that no clear property is needed):
+
+Example
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21; 
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

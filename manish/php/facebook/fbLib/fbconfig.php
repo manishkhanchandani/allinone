@@ -14,9 +14,9 @@ use Facebook\Entities\AccessToken;
 use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
-FacebookSession::setDefaultApplication( '168072164626','e081f3b9c002126180318101739c6ebe' );
+FacebookSession::setDefaultApplication( '156669051033535','7d6e7b6a943a021c84c4a42fc3eddb5e' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('http://demos.krizna.com/1353/fbconfig.php' );
+    $helper = new FacebookRedirectLoginHelper('http://localhost:8888/allinone/manish/php/facebook/fbLib/fbconfig.php' );
 try {
   $session = $helper->getSessionFromRedirect();
 } catch( FacebookRequestException $ex ) {
@@ -39,6 +39,9 @@ if ( isset( $session ) ) {
         $_SESSION['FULLNAME'] = $fbfullname;
 	    $_SESSION['EMAIL'] =  $femail;
     /* ---- header location after session ----*/
+    echo '<pre>';
+    print_r($_SESSION);
+    exit;
   header("Location: index.php");
 } else {
   $loginUrl = $helper->getLoginUrl();
