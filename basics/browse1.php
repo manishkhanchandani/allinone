@@ -68,7 +68,7 @@ $queryString_rsUser = sprintf("&totalRows_rsUser=%d%s", $totalRows_rsUser, $quer
         <td><?php echo $row_rsUser['description']; ?></td>
         <td><?php echo $row_rsUser['marital_status']; ?></td>
         <td><a href="browse1Edit.php?user_id=<?php echo $row_rsUser['user_id']; ?>">Edit</a></td>
-        <td>Delete</td>
+        <td><a href="deleteUser.php?user_id=<?php echo $row_rsUser['user_id']; ?>">Delete</a></td>
       </tr>
       <?php } while ($row_rsUser = mysql_fetch_assoc($rsUser)); ?>
       </table>

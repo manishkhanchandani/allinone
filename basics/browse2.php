@@ -29,7 +29,7 @@ $totalRows_rsCategories = mysql_num_rows($rsCategories);
       <td><?php echo $row_rsCategories['category']; ?></td>
       <td><?php echo $row_rsCategories['sorting']; ?></td>
       <td><a href="edit1.php?id=<?php echo $row_rsCategories['id']; ?>">Edit</a></td>
-      <td>&nbsp;</td>
+      <td><a href="deleteCategory.php?id=<?php echo $row_rsCategories['id']; ?>">Delete</a></td>
     </tr>
     <?php } while ($row_rsCategories = mysql_fetch_assoc($rsCategories)); ?>
 </table>

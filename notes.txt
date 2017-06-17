@@ -93,7 +93,7 @@ Programming
 	for loop
 	while loop
 	
-	&&, ||, !
+	&&, ||, !, break, continue
 	
 	>, < ==, >= <=, %
 	
@@ -114,9 +114,18 @@ Edit
 	Step 3: Create a edit form and apply php code
 	Step 4: Create a link on the browse page which will send user to edit page.
 	Step 5: Redirect user back to browse page after edit.
-	
+
+Edit Method 2:
+	Step 1: Create edit.php
+	Step 2: create recordset rsEdit
+	Step 3: Create a form which you want to update
+	Step 4: Create one hidden field with primary key and change dynamic value of this field.
+	Step 4: Fill the fields with dynamic values
+	Step 5: Go Insert -> Application Object -> Update Record (2nd Option)
+	Step 6: Fill appropriate option in the form.
 
 Delete
+	done
 
 Log In on Website
 
@@ -237,9 +246,47 @@ for (var i = 0; i < 10; i++) {
 </script>
 
 
+CSS
+
+	div {
+		display: inline;		
+	}
+	span, a {
+		display: block;		
+	}
+	
+	
+display: none
+
+visibility: hidden
+element is present but hidden, and it takes the necessary space
+
+display: none
+element is present but hidden, and it does not take the necessay space
+
+Javascript:
+
+Sytax for While Loop:
+
+while (condition) {
+	//code will run
+	//change the condition
+}
 
 
 
+<script>
 
+var number = 0;
+
+
+while (number < 10) {
+	console.log('number is ', number);
+	
+	number++;
+}
+
+console.log('done');
+</script>
 
 
