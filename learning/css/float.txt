@@ -1,0 +1,318 @@
+CSS Layout - float and clear
+❮ PreviousNext ❯
+The float property specifies whether or not an element should float.
+
+The clear property is used to control the behavior of floating elements.
+
+
+
+The float Property
+In its simplest use, the float property can be used to wrap text around images.
+
+The following example specifies that an image should float to the right in a text:
+
+Example
+img {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+Try it Yourself »
+The clear Property
+The clear property is used to control the behavior of floating elements.
+
+Elements after a floating element will flow around it. To avoid this, use the clear property.
+
+The clear property specifies on which sides of an element floating elements are not allowed to float:
+
+Example
+div {
+    clear: left;
+}
+Try it Yourself »
+The clearfix Hack
+If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.
+
+Then we can add overflow: auto; to the containing element to fix this problem:
+
+Example
+.clearfix {
+    overflow: auto;
+}
+Try it Yourself »
+The overflow:auto clearfix works well as long as you are able to keep control of your margins and padding (else you might see scrollbars). The new, modern clearfix hack however, is safer to use, and the following code is used for most webpages:
+
+Example
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+Try it Yourself »
+You will learn more about the ::after pseudo-element in a later chapter.
+
+Web Layout Example
+It is common to do entire web layouts using the float property:
+
+
+Example
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+
+.column {
+    float: left;
+    padding: 15px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menu {
+    width: 25%;
+}
+
+.content {
+    width: 75%;
+}
+
+
+
+All CSS Float Properties
+Property	Description
+clear	Specifies on which sides of an element where floating elements are not allowed to float
+float	Specifies whether or not an element should float
+overflow	Specifies what happens if content overflows an element's box
+overflow-x	Specifies what to do with the left/right edges of the content if it overflows the element's content area
+overflow-y	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area
+
+
+
+Example: Float right
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+</style>
+</head>
+<body>
+
+<p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+<p><img src="w3css.gif" alt="W3Schools.com" width="100" height="140">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+</body>
+</html>
+
+
+Example: Clear Float
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.div1 {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+
+.div2 {
+    border: 1px solid red;
+}
+
+
+.div3 {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+
+.div4 {
+    border: 1px solid red;
+    clear: left;
+}
+</style>
+</head>
+<body>
+
+<h2>Without clear</h2>
+<div class="div1">div1</div>
+<div class="div2">div2 - Notice that the div2 element is after div1, in the HTML code. However, since div1 is floated to the left, this happens: the text in div2 is floated around div1, and div2 surrounds the whole thing.</div>
+
+<h2>Using clear</h2>
+<div class="div3">div3</div>
+<div class="div4">div4 - Using clear moves div4 down below the floated div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+</body>
+</html>
+
+
+Example: clearfix
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    border: 3px solid #73AD21;
+}
+
+.img1 {
+    float: right;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.img2 {
+    float: right;
+}
+</style>
+</head>
+<body>
+
+<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+<div><img class="img1" src="w3css.gif" alt="W3Schools.com" width="100" height="140">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+
+<p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+<div class="clearfix"><img class="img2" src="w3css.gif" alt="W3Schools.com" width="100" height="140">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+
+</body>
+</html>
+
+
+Example clearfix with table
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    border: 3px solid #73AD21;
+}
+
+.img1 {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.img2 {
+    float: right;
+}
+</style>
+</head>
+<body>
+
+<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+<div><img class="img1" src="w3css.gif" alt="W3Schools.com" width="100" height="140">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+
+<p style="clear:right">Add the clearfix hack to the containing element, to fix this problem:</p>
+
+<div class="clearfix"><img class="img2" src="w3css.gif" alt="W3Schools.com" width="100" height="140">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+
+</body>
+</html>
+
+
+Example Web layout
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+</html>
+
