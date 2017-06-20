@@ -129,12 +129,17 @@ Delete
 	done
 
 Log In on Website
+	done
 
 Register on Website
+	done
 
 Logout
+	done
 
 Restrict access to webpage
+
+Master Detail
 
 
 Idea about my first website
@@ -175,6 +180,25 @@ REMEDY FINDER
 		
 		
 	Kate on website, she is having headache, kate to find acunpuncturist near her area
+
+Donations
+
+	Person will come, i need donation for education, treatement, 
+		$1000
+		paypal addres
+		
+	$5 to him, carrie: $10, Kate, $1.....
+	
+
+Get to gether
+	User - logged,
+		user a, user b
+		Wedding
+			Shopping list
+				Sugar, Splendia, equal
+				Salt
+				
+
 
 
 Advertisement - paid
@@ -289,5 +313,41 @@ while (number < 10) {
 
 console.log('done');
 </script>
+
+
+CSS
+float: left		to make div align on left side and next div will occupy space after the first div
+or
+float: right 	to make div align on right side and next div will occupy space before the first div
+
+we should use clear: left or clear: right or clear:both at the end of all float properties
+
+
+javascript
+
+!x
+
+for (var x = 0; x < 10; x++) {
+	console.log('real x value is ', x);
+	if (x == 5 || x == 2) {
+		continue;
+	}
+	
+	console.log('x: ', x);
+	
+}
+
+
+for (var x = 0; x < 10; x++) {
+	console.log('real x value is ', x);
+	if (x == 5 || x == 2) {
+		break;
+	}
+	
+	console.log('x: ', x);
+	
+}
+
+
 
 
