@@ -42,9 +42,7 @@ Abhash.malviya08@gmail.com
 
 
 
-design9992@gmail.com
-carrieparecki@gmail.com
-manishkk74@gmail.com
+design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com
 
 1. URL Parameter
 	$_GET['keyword']
@@ -138,6 +136,12 @@ Logout
 	done
 
 Restrict access to webpage
+
+go to previous url, username and password, username, password and accesslevel
+
+	1. Login page, i use username and password.
+	2. create member page ( 1 to 1000) and attach restrict access server behaviour and here choose the first option i.e. username and password
+	3. Create restrict.php for unauthourised users
 
 Master Detail
 
@@ -348,6 +352,34 @@ for (var x = 0; x < 10; x++) {
 	
 }
 
+
+Website
+	url: http://facebook.com/manny
+
+This page is very secretive, it only for members
+
+Site -> will redirect to login page, and when you fill your login details then it redirects to proper page. http://facebook.com/manny
+
+
+some pages which are for general public, 
+some pages which are for members only
+
+Then use username and password only method
+
+
+some pages which are for general public, 
+some pages which are for members only
+some pages which are for admins only
+
+Then use username and password only method
+
+A
+b
+c
+
+CSS
+Use float left and clear left
+or Use display: inline-block
 
 
 
