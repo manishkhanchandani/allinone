@@ -44,8 +44,10 @@ Linkedlist.prototype.addHead = function(value) {
 Linkedlist.prototype.addTail = function(value) {
     var newNode = new Linkedlist.Node(value, null);
     var curr = this.head;
+    this.length++;
     if (this.head === null) {
         this.head = newNode;
+        return;
     }
     
     while ((curr.next != null)) {
@@ -59,10 +61,43 @@ Linkedlist.prototype.addTail = function(value) {
 
 //D. Insertion of an element in sorted order in linked list
 
+Linkedlist.prototype.sortedInsert = function (value) {
+    var newNode = new Linkedlist.Node(value, null);
+    var curr = this.head;
+    this.length++;
+    if (curr === null || curr.value > value) {
+        newNode.next = this.head;
+        this.head = newNode;
+        return;
+    }
+    
+    while (curr.next != null && curr.next.value < value) {
+        curr = curr.next;
+    }
+    
+    newNode.next = curr.next;
+    curr.next = newNode;
+}
+
+//Traversing linked list
+Linkedlist.prototype.print = function() {
+    console.log('printing the list');
+    var temp = this.head;
+    while (temp != null) {
+        console.log('value is ', temp.value);
+        temp = temp.next;
+    }
+}
+
 
 var ll = new Linkedlist();
 console.log(ll);
 ll.addHead(10);
 console.log(ll);
-ll.addTail(14);
+ll.addTail(12);
 console.log(ll);
+ll.addTail(13);
+console.log(ll);
+ll.sortedInsert(11);
+console.log(ll);
+ll.print();

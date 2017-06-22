@@ -1,0 +1,438 @@
+HTML Lists and CSS List Properties
+In HTML, there are two main types of lists:
+
+unordered lists (<ul>) - the list items are marked with bullets
+ordered lists (<ol>) - the list items are marked with numbers or letters
+The CSS list properties allow you to:
+
+Set different list item markers for ordered lists
+Set different list item markers for unordered lists
+Set an image as the list item marker
+Add background colors to lists and list items
+Different List Item Markers
+The list-style-type property specifies the type of list item marker.
+
+The following example shows some of the available list item markers:
+
+Example
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+Try it Yourself »
+Note: Some of the values are for unordered lists, and some for ordered lists.
+
+An Image as The List Item Marker
+The list-style-image property specifies an image as the list item marker:
+
+Example
+ul {
+    list-style-image: url('sqpurple.gif');
+}
+Try it Yourself »
+Position The List Item Markers
+The list-style-position property specifies whether the list-item markers should appear inside or outside the content flow:
+
+Example
+ul {
+    list-style-position: inside;
+}
+Try it Yourself »
+Remove Default Settings
+The list-style-type:none property can also be used to remove the markers/bullets. Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>:
+
+Example
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+Try it Yourself »
+List - Shorthand property
+The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
+
+Example
+ul {
+    list-style: square inside url("sqpurple.gif");
+}
+Try it Yourself »
+When using the shorthand property, the order of the property values are:
+
+list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
+list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)
+list-style-image (specifies an image as the list item marker)
+If one of the property values above are missing, the default value for the missing property will be inserted, if any.
+
+Styling List With Colors
+We can also style lists with colors, to make them look a little more interesting.
+
+Anything added to the <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will affect the individual list items:
+
+Example
+ol {
+    background: #ff9999;
+    padding: 20px;
+}
+
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+
+ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ul li {
+    background: #cce5ff;
+    margin: 5px;
+}
+Result:
+
+Coffee
+Tea
+Coca Cola
+Coffee
+Tea
+Coca Cola
+
+
+
+
+
+More Examples
+Customized list with a red left border
+This example demonstrates how to create a list with a red left border.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    border-left: 5px solid red;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+</style>
+</head>
+<body>
+
+<p>List with a red left border:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+Full-width bordered list
+This example demonstrates how to create a bordered list without bullets.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+    border-bottom: none
+}
+</style>
+</head>
+<body>
+
+<p>Full-width bordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+All the different list-item markers for lists
+This example demonstrates all the different list-item markers in CSS.
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: disc;}
+ul.c {list-style-type: square;}
+
+ol.d {list-style-type: armenian;}
+ol.e {list-style-type: cjk-ideographic;}
+ol.f {list-style-type: decimal;}
+ol.g {list-style-type: decimal-leading-zero;}
+ol.h {list-style-type: georgian;}
+ol.i {list-style-type: hebrew;}
+ol.j {list-style-type: hiragana;}
+ol.k {list-style-type: hiragana-iroha;}
+ol.l {list-style-type: katakana;}
+ol.m {list-style-type: katakana-iroha;}
+ol.n {list-style-type: lower-alpha;}
+ol.o {list-style-type: lower-greek;}
+ol.p {list-style-type: lower-latin;}
+ol.q {list-style-type: lower-roman;}
+ol.r {list-style-type: upper-alpha;}
+ol.s {list-style-type: upper-latin;}
+ol.t {list-style-type: upper-roman;}
+ol.u {list-style-type: none;}
+ol.v {list-style-type: inherit;}
+</style>
+</head>
+<body>
+
+<ul class="a">
+  <li>Circle type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="b">
+  <li>Disc type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="c">
+  <li>Square type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ol class="d">
+  <li>Armenian type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="e">
+  <li>Cjk-ideographic type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="f">
+  <li>Decimal type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="g">
+  <li>Decimal-leading-zero type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="h">
+  <li>Georgian type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="i">
+  <li>Hebrew type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="j">
+  <li>Hiragana type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="k">
+  <li>Hiragana-iroha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="l">
+  <li>Katakana type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="m">
+  <li>Katakana-iroha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="n">
+  <li>Lower-alpha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="o">
+  <li>Lower-greek type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="p">
+  <li>Lower-latin type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="q">
+  <li>Lower-roman type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="r">
+  <li>Upper-alpha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="s">
+  <li>Upper-latin type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="t">
+  <li>Upper-roman type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="u">
+  <li>None type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="v">
+  <li>inherit type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+</body>
+</html>
+
+
+
+
+Exercise 1:
+Set the list style for unordered lists to "square", and the list style for ordered lists to "upper-roman".
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<p>This is an unordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>This is an ordered list:</p>
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+</body>
+</html>
+
+Exercise 2: 
+
+Set the image "sqpurple.gif" as the list item marker for the unordered list.
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<p>This is an unordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+</body>
+</html>
+
+
+Exercise 3:
+With the list-style property: Set the unordered list marker to "img_marker.png", with a backup style of "circle", and display the markers inside the content flow.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<p>This is an unordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+</body>
+</html>
+
