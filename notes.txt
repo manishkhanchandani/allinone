@@ -146,6 +146,8 @@ go to previous url, username and password, username, password and accesslevel
 Master Detail
 
 
+
+
 Idea about my first website
 
 
@@ -157,6 +159,12 @@ Every person has life insurance, but no body in this world has life reminder.
 Reminder, phone number and email address of your son, put some message in the text box, 
 once in every month,3 months, consider dead, and my website send message to your loved one's 
 
+Cron Job
+php file which runs after certain interval
+10 min
+echo 'hello world';
+
+, run every hour, go database and it check who have not logged since 3 months, and if i find, some one does not logged in, cron jobs will send email to that email which is mentioned in database. 
 
 MY VIEWS
 Person has views
@@ -202,6 +210,9 @@ Get to gether
 				Sugar, Splendia, equal
 				Salt
 				
+Rentals
+	Dress which is very costly $1000,
+		I want to rent this dress for 1 day, $100 for that 
 
 
 
@@ -383,3 +394,14 @@ or Use display: inline-block
 
 
 
+20 page in my website
+	header, content, footer
+	
+include ('header.php');
+include ('footer.php');
+
+Templating
+	1 Template
+		header
+		content
+		footer

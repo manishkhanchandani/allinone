@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Compound Interest</title>
+<script>
+// A common problem in personal finance is that of determining how much money will accumulate in a bank acount after n years if a known amount P, is deposited initially and the account collects interest at a rate of r percent per year, compounded annually.
+//Formula: F = P( 1 + i)^n, i = r / 100
+
+/*
+1. Get the values of P (initial amount), r (rate of interest), n (number of years)
+2. Calculate a value for i, i = r / 100;
+3. Calculate a value for F, F = P(1 + i) ^ n
+4. Print the result, i.e. we will print the value F
+*/
+
+function compoundInterest(P, r, n) {
+	console.log('P is ', P);
+	console.log('r is ', r);
+	console.log('n is ', n);
+	
+	var i = r / 100;
+	console.log('i is ', i);
+	
+	var F = P * Math.pow((1 + i), n);
+	return F;
+}
+
+var result = compoundInterest(1, 5, 10);
+console.log('Result is ', result);
+</script>
+</head>
+
+<body>
+</body>
+</html>
