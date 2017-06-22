@@ -1,0 +1,111 @@
+CSS Layout - inline-block
+❮ PreviousNext ❯
+The inline-block Value
+It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property.
+
+However, the inline-block value of the display property makes this even easier.
+
+inline-block elements are like inline elements but they can have a width and a height.
+
+Examples
+The old way - using float (notice that we also need to specify a clear property for the element after the floating boxes):
+
+Example
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21; 
+}
+
+.after-box {
+    clear: left;
+}
+Try it Yourself »
+The same effect can be achieved by using the inline-block value of the display property (notice that no clear property is needed):
+
+Example
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21; 
+}
+
+
+
+Example 1
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;  
+}
+
+.after-box {
+    clear: left;
+    border: 3px solid red;      
+}
+</style>
+</head>
+<body>
+
+<h2>The Old Way - using float</h2>
+
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+
+<div class="after-box">Another box, after the floating boxes...</div>
+
+</body>
+</html>
+
+
+Example 2
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;  
+}
+
+.after-box {
+    border: 3px solid red; 
+}
+</style>
+</head>
+<body>
+
+<h2>The New Way - using inline-block</h2>
+
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+
+<div class="after-box">Another box, after the floating boxes...</div>
+
+</body>
+</html>
