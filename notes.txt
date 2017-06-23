@@ -6,7 +6,10 @@ https://git-scm.com/download/win
 
 https://tortoisegit.org/download/
 
+design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, romonacz@gmail.com
 
+Every day, we do some css, some javascript, backend php & mysql
+Angular or React 
 
 
 Server Behavior is showing Insert Record in the box
@@ -53,7 +56,6 @@ Abhash.malviya08@gmail.com
 
 
 
-design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com
 
 1. URL Parameter
 	$_GET['keyword']
@@ -416,3 +418,58 @@ Templating
 		header
 		content
 		footer
+		
+		
+Project or Website in PHP & Mysql
+
+Life Reminder
+
+User will come in this website, he will register and login to this website,
+
+My Settings
+	every month he login on our website once, and if he don't login for 1 month, 1 week, 1 year, 3 months
+	that means i will consider him dead,
+	and then i will send email to him and i will ask "Are you alive", if yes - reply below, and if not, don't worry "we will send your message to related email" and if don't reply in 72 hours, then i will send my message to his relative.
+
+My Reminders
+
+
+	Title: Son's Reminder
+	Email: 
+	Message:
+	File Link:
+	Active: True or false
+
+	Title: Daughter's Reminder
+	Email: 
+	Message:
+	File Link:
+	Active: True or false
+	
+
+
+
+
+
+
+
+
+
+He will create reminder's
+	Email: son's email address
+	Message: million dollar is kept for you in bank, bank locker number blah blah
+	
+When this person die, this message will be send to the email.
+
+some message to his son, but now, after his death, 
+
+
+
+
+
+
+
+
+
+
+
