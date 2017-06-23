@@ -1,3 +1,14 @@
+http://core.mkgalaxy.com/up/dw.exe
+
+https://www.apachefriends.org/index.html
+
+https://git-scm.com/download/win
+
+https://tortoisegit.org/download/
+
+
+
+
 Server Behavior is showing Insert Record in the box
 
 Dreamweaver creates hidden input field, MM_insert
