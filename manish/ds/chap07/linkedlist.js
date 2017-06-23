@@ -90,6 +90,29 @@ Linkedlist.prototype.print = function() {
 }
 
 
+Linkedlist.prototype.isPresent = function(data) {
+    var temp = this.head;
+    while (temp != null) {
+        if (temp.value === data) {
+            return true;
+        }
+        
+        temp = temp.next;
+    };
+    return false;
+}
+
+Linkedlist.prototype.removeHead = function() {
+    if (this.isEmpty()) {
+        throw new Error('Empty List');
+    }
+    
+    var value = this.head.value;
+    this.head = this.head.next;
+    this.length--;
+    return value;
+}
+
 var ll = new Linkedlist();
 console.log(ll);
 ll.addHead(10);
@@ -100,4 +123,8 @@ ll.addTail(13);
 console.log(ll);
 ll.sortedInsert(11);
 console.log(ll);
+ll.print();
+
+console.log(ll.isPresent(19));
+ll.removeHead();
 ll.print();
