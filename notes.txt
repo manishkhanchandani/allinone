@@ -456,6 +456,21 @@ My Settings
 		Cron will go to reminders and cron will find all the reminders of kate and cron will check if all reminders in active state and then cron will email all the reminders to related emails.
 
 
+Kate 1
+	1R	1
+	2R	1
+	3R	1
+Carrie 2
+	4R	2
+	5R	2
+Romona 3
+	6R	3
+	7R	3
+	8R	3
+Manny 4
+	9R	4
+	10R	4
+
 My Reminders
 
 
