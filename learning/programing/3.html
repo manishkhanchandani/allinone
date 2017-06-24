@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script>
+	//Program 3: we have some numbers for example, 3, 5, 6, 8, 10, we need to find the average of these numbers
+	
+	/* Steps
+		1. Input: Array, put some numbers
+		2. Loop through the array, i.e. using for loop, and we will take each number and total = total  + number
+		
+		total = 0;
+		total = total + 3;
+		total = total + 5;
+		total = total + 6;
+		total = total + 8;
+		total = total + 10;
+		
+		3. calculate the average formula
+			average = total / n
+			
+		4. Print the value of average;
+	*/
+	
+	var numbers = [12, 25];
+	console.log(numbers);
+	var size = numbers.length;
+	console.log('n: ', size);
+	//console.log(numbers[0]);
+	//console.log(numbers[1]);
+	var total= 0;
+	
+	/*i = 0
+	total = total + numbers[0];
+	
+	i = 1;
+	total = total + numbers[1]; //5
+	
+	i = 2
+	total = total + numbers[2]; // 6
+	
+	i = 3
+	total = total + numbers[3]; //10
+	
+	i = 4 
+	total = total + numbers[4]; //15*/
+	
+	//run the loop
+	for (var i = 0; i < size; i++) {
+		//console.log('previous total = ', total, ', and number is ', numbers[i]);
+		total = total + numbers[i];
+		//console.log('next total is ', total);
+	}
+	
+	console.log('total is ', total);
+	var average = total / size;
+	
+	console.log('average of numbers is ', average);
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -6,6 +6,9 @@ https://git-scm.com/download/win
 
 https://tortoisegit.org/download/
 
+http://core.mkgalaxy.com/up/SQLyog615.rar
+
+
 design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, romonacz@gmail.com
 
 Every day, we do some css, some javascript, backend php & mysql
@@ -424,28 +427,61 @@ Project or Website in PHP & Mysql
 
 Life Reminder
 
+Phase 1, Simple
+
 User will come in this website, he will register and login to this website,
 
 My Settings
-	every month he login on our website once, and if he don't login for 1 month, 1 week, 1 year, 3 months
+	every month he login on our website once, and if he don't login for 1 month
 	that means i will consider him dead,
 	and then i will send email to him and i will ask "Are you alive", if yes - reply below, and if not, don't worry "we will send your message to related email" and if don't reply in 72 hours, then i will send my message to his relative.
+	
+	kate has logged on our website on may 22 2017
+	
+	Cron will run for users and it will check,
+	
+	Kate
+		send email to kate
+		emailFlag1 = 1
+		emailFlagDate = currentTime()
+		
+	Kate will receive the email and she will click yes and she logs in our site
+		login_dt = current date
+		emailFlag1 = 0
+		
+	I have to wait for 3 days for her to reply, cron will be worried,
+	
+	Cron has to take action	
+		
+		Cron will go to reminders and cron will find all the reminders of kate and cron will check if all reminders in active state and then cron will email all the reminders to related emails.
+
 
 My Reminders
 
 
-	Title: Son's Reminder
+	Title: romona
 	Email: 
 	Message:
 	File Link:
 	Active: True or false
 
-	Title: Daughter's Reminder
+	Title: carrie
+	Email: 
+	Message:
+	File Link:
+	Active: True or false
+
+	Title: manny
 	Email: 
 	Message:
 	File Link:
 	Active: True or false
 	
+Steps
+1. Create repository on github
+2. Git clone to get the repository on our local folder
+3. Create a site in dreamweaver
+4. Create a database and related tables
 
 
 
@@ -466,10 +502,22 @@ some message to his son, but now, after his death,
 
 
 
+4 types of position
+static
+relative
+absolute
+fixed
+
+
+top, left, bottom, right
 
 
 
+relative position:
+	top or left or bottom or right, was calculated from the position where div was present originally
 
+abolute position:
+	top or left or bottom or right, from the parent (body)
 
 
 
