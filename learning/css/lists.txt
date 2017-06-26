@@ -436,3 +436,27 @@ With the list-style property: Set the unordered list marker to "img_marker.png",
 </body>
 </html>
 
+
+Exercise 4:
+Remove the bullets/markers from the list items.
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+</body>
+</html>
+
+
+
