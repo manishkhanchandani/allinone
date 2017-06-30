@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>display</title>
+<style type="text/css">
+    .container {
+        border-bottom: 1px dotted black;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .box {
+        width: 120px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        
+        position: absolute;
+        visibility: visible;
+    }
+    
+    .container:hover .box {
+        visibility: visible;
+    }
+    
+    .right {
+        top: -5px;
+        left: 105%;
+    }
+    
+    .left {
+        top: -5px;
+        right: 105%;
+    }
+    
+    .top {
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+    
+    .bottom {
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+    
+    .container .top::after {
+        content: ' ';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+    .container .bottom::after {
+        content: ' ';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+    .container .left::after {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent black;
+    }
+    .container .right::after {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+    }
+</style>
+</head>
+
+<body>
+<div style="margin-left: 300px;">
+<div class="container">
+    Hey Buddy
+    <span class="box right">May be later</span>
+</div>
+    <br><br><br>
+<div class="container">
+    Hey Buddy
+    <span class="box left">May be later</span>
+</div>
+    <br><br><br>
+<div class="container">
+    Hey Buddy
+    <span class="box top">May be later</span>
+</div>
+    <br><br><br>
+<div class="container">
+    Hey Buddy
+    <span class="box bottom">May be later</span>
+</div>
+</div>
+</body>
+</html>
