@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDnERUhALUFNxWZsjaLpT4_nqIYW2i2jDU",
+    authDomain: "mkgxy-3d7ce.firebaseapp.com",
+    databaseURL: "https://mkgxy-3d7ce.firebaseio.com",
+    projectId: "mkgxy-3d7ce",
+    storageBucket: "mkgxy-3d7ce.appspot.com",
+    messagingSenderId: "938795223362"
+  };
+  firebase.initializeApp(config);
+</script>
+    
+<script>
+    //https://firebase.google.com/docs/auth/web/password-auth
+window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+  'size': 'invisible',
+  'callback': function(response) {
+    // reCAPTCHA solved, allow signInWithPhoneNumber.
+    onSignInSubmit();
+  }
+});
+function onSignInSubmit() {
+    console.log('hey');
+    var phoneNumber = '+14085052726';//getPhoneNumberFromUserInput();
+    var appVerifier = window.recaptchaVerifier;
+    firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+        .then(function (confirmationResult) {
+            console.log('confirmationResult: ', confirmationResult);
+          // SMS sent. Prompt user to type the code from the message, then sign the
+          // user in with confirmationResult.confirm(code).
+          window.confirmationResult = confirmationResult;
+        }).catch(function (error) {
+          // Error; SMS not sent
+          // ...
+    });
+}
+    
+
+</script>
+</head>
+
+<body>
+    <p>Phone Number</p>
+<input type="text" name="phone" id="phone" />
+    <button id="sign-in-button" >Login</button>
+</body>
+</html>
