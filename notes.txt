@@ -9,7 +9,11 @@ https://tortoisegit.org/download/
 http://core.mkgalaxy.com/up/SQLyog615.rar
 
 
-design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, romonacz@gmail.com
+design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, 
+
+
+
+romonacz@gmail.com
 
 Every day, we do some css, some javascript, backend php & mysql
 Angular or React 
@@ -497,12 +501,32 @@ Steps
 2. Git clone to get the repository on our local folder
 3. Create a site in dreamweaver
 4. Create a database and related tables
+5. Create Pages
+
+Phase 1, limited functionality
+
+Entry page: index.php, contact_us.php, faq.php, our_team.php, about_us.php, terms.php, privacy.php
+
+users
+	Login: login.php, intermediate1.php, login_success.php, login_failure.php, 
+	Register: register.php, register_success.php, register_failure.php, intermediate2.php (mail to user)
+	Forgot: forgot.php, forgot_success.php, forgot_failure.php, intermediate3.php (mail to user with his password)
+	Change Password: change_password.php
+	logout.php
+
+reminder
+	new_reminder.php
+	list_reminders.php
+	edit_reminder.php
+	delete_reminder.php
+
+cron
+	cron1.php	it will check if user is not logged in for 1 month, if user has not logged in then send mail and update the database
+	cron2.php	it will check if user is not appeared within 3 days and if so, it will send reminders to all loved ones.
 
 
-
-
-
-
+6. Create Template
+7. Add navigation to the template
 
 
 
@@ -533,6 +557,167 @@ relative position:
 
 abolute position:
 	top or left or bottom or right, from the parent (body)
+	
+static position
+static is default position
+relative is change of position from its original position
+absolute is change of position from the document or body
+fixed is similar to absolute but it remains at fixed position where as absolute changes position on scrolling.
+
+to make the div center align, use static or relative position with margin: auto.
 
 
 
+
+Relative Position or static position
+	margin: auto;
+	margin: 0 auto;
+	
+Absolute Position
+	margin: auto will not work
+	
+	left: 50%
+	margin-left: -half of the div width
+	
+	top: 50%
+	margin-top: -half of the div height
+
+Position: relative
+	top or bottom does not have %
+	
+	
+ES 5 version
+
+ES 6 Version
+
+
+Constants are defined only once and we cannot change the value once it is assigned;
+const PI = 3.14;
+console.log(PI);
+
+var age = 30;
+if (age == 30) {
+	let firstName = 'manny';
+	console.log('first name is ', firstName);
+}
+console.log('first name is ', firstName);
+
+
+CSS
+Create 2 div, one is parent and one is child
+make parent div as either position = relative or position = absolute and you can rearrange the top div as per your requirement using following properties: top = 0, left = 0, bottom = 0, right = 0, left=50% and margin-left as needed, top=50% and margin-top as needed.
+
+child div should always be absolute, then child div will be attached to parent div.
+
+
+Javascript
+ES6 version
+
+var book = {
+	name: 'Learning Javascript'
+}
+console.log(book.name);
+console.log('hello
+world');
+VM638:1 Uncaught SyntaxError: Invalid or unexpected token
+console.log(`hello
+world`);
+console.log(`hello, you are reading
+${book.name} and we are now in new line`);
+
+Arrow Function
+function firstFunction() {
+console.log('hello world');
+}
+undefined
+firstFunction()
+
+let secondFunction = () => {
+	console.log('hello world');
+}
+
+secondFunction();
+
+function areaOfCircle(radius) {
+	var PI = 3.14;
+	var area = PI * radius * radius;
+	return area;
+}
+
+let circleArea = (radius) => 3.14 * radius * radius;
+
+
+
+
+$name
+$fullName
+
+
+$_SESSION['MM_Username']
+
+$_GET['dkfjdk']
+$_POST['dkfd']
+
+
+select * from lr_reminders		first table i.e. lr_reminders
+INNER JOIN lr_users				joining with another table i.e. lr_users using word "INNER JOIN"
+ON lr_reminders.user_id = lr_users.user_id		we are joining using the common field: user_id
+
+
+
+function add(x, y) {
+	console.log('x is ', x);
+	console.log('y is ', y);
+	return x + y;
+}
+undefined
+add(2, 3);
+VM4170:2 x is  2
+VM4170:3 y is  3
+5
+add();
+VM4170:2 x is  undefined
+VM4170:3 y is  undefined
+NaN
+function sub(x = 4, y = 1) {
+	console.log('x is ', x);
+	console.log('y is ', y);
+	return x - y;
+}
+undefined
+sub(10, 5);
+VM4282:2 x is  10
+VM4282:3 y is  5
+5
+sub();
+VM4282:2 x is  4
+VM4282:3 y is  1
+3
+
+
+
+Normal
+	rsEdit
+	Insert -> Application Object -> Update -> Update Record Form Wizard and we choose only login_dt
+	
+We changed
+	$updateSQL = sprintf("UPDATE lr_users SET login_dt=%s WHERE user_id=%s",
+				   GetSQLValueString(time(), "int"),
+				   GetSQLValueString($row_rsEdit['user_id'], "int"));
+				   
+We moved following part above update statement
+
+$colname_rsEdit = "-1";
+if (isset($_SESSION['MM_Username'])) {
+  $colname_rsEdit = (get_magic_quotes_gpc()) ? $_SESSION['MM_Username'] : addslashes($_SESSION['MM_Username']);
+}
+mysql_select_db($database_conn, $conn);
+$query_rsEdit = sprintf("SELECT * FROM lr_users WHERE email = '%s'", $colname_rsEdit);
+$rsEdit = mysql_query($query_rsEdit, $conn) or die(mysql_error());
+$row_rsEdit = mysql_fetch_assoc($rsEdit);
+$totalRows_rsEdit = mysql_num_rows($rsEdit);
+
+Then we put header location to redirect to user to success.php page
+
+header("Location: login_success.php");
+exit;

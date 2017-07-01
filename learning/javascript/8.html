@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>display</title>
+<script>
+var obj = {};
+
+obj = {
+	name: {
+		first: 'John',
+		last: 'dey'
+	},
+	address: {
+		city: 'San Francisco',
+		state: 'CA',
+		country: 'US'
+	},
+	showMe: function() {
+		console.log('hi');
+		alert('hi');
+	}
+}
+
+
+
+function Book(title, pages, isbn) {
+	this.title = title;
+	this.pages = pages;
+	this.isbn = isbn;
+	this.printIsbn = function() {
+		console.log(this.isbn);
+	}
+}
+
+Book.prototype.printTitle = function() {
+	console.log(this.title);
+}
+Book.prototype.printPages = function() {
+	console.log(this.pages);
+}
+
+var bk = new Book('My Strategy', 200, '12345');
+
+bk.printTitle();
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
