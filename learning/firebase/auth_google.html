@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDnERUhALUFNxWZsjaLpT4_nqIYW2i2jDU",
+    authDomain: "mkgxy-3d7ce.firebaseapp.com",
+    databaseURL: "https://mkgxy-3d7ce.firebaseio.com",
+    projectId: "mkgxy-3d7ce",
+    storageBucket: "mkgxy-3d7ce.appspot.com",
+    messagingSenderId: "938795223362"
+  };
+  firebase.initializeApp(config);
+</script>
+    
+<script>
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+      console.log('auth user: ', user);
+    // User is signed in.
+    var userData = {};
+      userData.displayName = user.providerData[0].displayName;
+      userData.email = user.providerData[0].email;
+      userData.photoURL = user.providerData[0].photoURL;
+      userData.uid = user.providerData[0].uid;
+      userData.providerId = user.providerData[0].providerId;
+      console.log('userData: ', userData);
+    // ...
+  } else {
+    // User is signed out.
+    // ...
+  }
+});
+    
+function googleLogin() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      console.log('token is ', token);
+      // The signed-in user info.
+      var user = result.user;
+      console.log('user is ', user);
+      
+      var userData = {};
+      userData.displayName = user.providerData[0].displayName;
+      userData.email = user.providerData[0].email;
+      userData.photoURL = user.providerData[0].photoURL;
+      userData.uid = user.providerData[0].uid;
+      userData.providerId = user.providerData[0].providerId;
+      userData.token = token;
+      console.log('userData: ', userData);
+      // ...
+    }).catch(function(error) {
+        console.log('error is ', error);
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+}
+    
+
+function facebookLogin() {
+    var provider = new firebase.auth.FacebookAuthProvider();
+    provider.addScope('user_birthday');
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      console.log(user);
+      
+      var userData = {};
+      userData.displayName = user.providerData[0].displayName;
+      userData.email = user.providerData[0].email;
+      userData.photoURL = user.providerData[0].photoURL;
+      userData.uid = user.providerData[0].uid;
+      userData.providerId = user.providerData[0].providerId;
+      userData.token = token;
+      console.log('userData: ', userData);
+      // ...
+    }).catch(function(error) {
+      console.log('error: ', error);
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+}
+    
+
+function twitterLogin() {
+    var provider = new firebase.auth.TwitterAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+      // You can use these server side with your app's credentials to access the Twitter API.
+      var token = result.credential.accessToken;
+      var secret = result.credential.secret;
+      // The signed-in user info.
+      var user = result.user;
+      
+      console.log(user);
+      
+      var userData = {};
+      userData.displayName = user.providerData[0].displayName;
+      userData.email = user.providerData[0].email;
+      userData.photoURL = user.providerData[0].photoURL;
+      userData.uid = user.providerData[0].uid;
+      userData.providerId = user.providerData[0].providerId;
+      userData.token = token;
+      userData.secret = secret;
+      console.log('userData: ', userData);
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+} 
+
+function gitHubLogin() {
+    console.log('github');
+    var provider = new firebase.auth.GithubAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      
+      console.log(user);
+      
+      var userData = {};
+      userData.displayName = user.providerData[0].displayName;
+      userData.email = user.providerData[0].email;
+      userData.photoURL = user.providerData[0].photoURL;
+      userData.uid = user.providerData[0].uid;
+      userData.providerId = user.providerData[0].providerId;
+      userData.token = token;
+      userData.secret = secret;
+      console.log('git hub userData: ', userData);
+      // ...
+    }).catch(function(error) {
+      console.log('error: ', error);
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+}
+    
+function signOut() {
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+        console.log('success logout');
+    }).catch(function(error) {
+      // An error happened.
+        console.log('error logout: ', error);
+    });
+}
+</script>
+</head>
+
+<body>
+ <div><button id="googleLogin" onClick="googleLogin();" >Google Login</button></div>
+  <div><button id="facebookLogin" onClick="facebookLogin();" >Facebook Login</button></div>
+  <div><button id="twitterLogin" onClick="twitterLogin();" >Twitter Login</button></div>
+  <div><button id="gitHubLogin" onClick="gitHubLogin();" >GitHub Login</button></div>
+  <div><button id="logout" onClick="signOut();" >Logout</button></div>
+</body>
+</html>
