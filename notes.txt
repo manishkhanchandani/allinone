@@ -752,6 +752,100 @@ Border Radius
 15px / 20px;
 
 
+Background Color
+
+Syntax: background-color: value;
+
+valid color name
+red, green, yellow
+
+Hex value:
+#ff0000
+
+RGB value
+rgb(255, 0, 0);
+
+Background Image
+
+background-image: url('paper.gif');
+
+Note: When using a background image, use an image that does not disturb the text.
+Text is dark, then use light background
+and if text is light, then use dark background
+
+Background Repeat
+
+x axis or on the y axis
+
+Syntax:
+background-repeat: no-repeat;
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+
+
+background-position
+
+background-attachment: fixed;
+
+
+JS
+function f1(x, y) {
+ 	   console.log('arguments are ', arguments);
+}
+undefined
+f1(2, 3);
+VM94:2 arguments are  (2) [2, 3, callee: function, Symbol(Symbol.iterator): function]0: 21: 3callee: function f1(x, y)length: 2Symbol(Symbol.iterator): function values()__proto__: Object
+undefined
+f1(2, 3, 4);
+VM94:2 arguments are  (3) [2, 3, 4, callee: function, Symbol(Symbol.iterator): function]0: 21: 32: 4callee: function f1(x, y)length: 3Symbol(Symbol.iterator): function values()__proto__: Object
+undefined
+function f2() {
+	console.log('total args are ', arguments.length);
+}
+undefined
+f2(1, 2, 3);
+VM193:2 total args are  3
+undefined
+f2('hello', 'world');
+VM193:2 total args are  2
+undefined
+f2('x', 'y', 'z', 'a', 'b', 'c');
+VM193:2 total args are  6
+undefined
+function f3() {
+	console.log(arguments[2]);
+}
+undefined
+f3(10, 20, 30, 40);
+VM293:2 30
+undefined
+var [x, y] = ['a', 'b'];
+undefined
+var obj = {x, y};
+undefined
+console.log(obj);
+VM365:1 Object {x: "a", y: "b"}
+undefined
+var hello = {
+	name: 'abcdef',
+	function1: function() {
+		console.log('we are inside the function 1');
+    }
+}
+undefined
+hello.function1();
+VM414:4 we are inside the function 1
+undefined
+var hello2 = {
+	name: 'abcdef',
+	function2() {
+		console.log('hello');
+    }
+}
+undefined
+hello2.function2();
+VM487:4 hello
+undefined
 
 
 
@@ -763,8 +857,16 @@ Border Radius
 
 
 
+Domain 
+	namserver , get it from hosting
+	
+after domain, fill the form, and all set
+
+Hosting
+	provides namserver
 
 
+Classes and object
 
 
 
