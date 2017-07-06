@@ -62,7 +62,7 @@ https://tortoisegit.org/download/
 Abhash.malviya08@gmail.com
 
 
-
+	
 
 1. URL Parameter
 	$_GET['keyword']
@@ -185,6 +185,20 @@ php file which runs after certain interval
 echo 'hello world';
 
 , run every hour, go database and it check who have not logged since 3 months, and if i find, some one does not logged in, cron jobs will send email to that email which is mentioned in database. 
+
+Cron1
+time() - current time
+
+90 days, what was time before 90 days
+
+time() - (60 * 60 * 24 * 90) = get some time which is 90 days earlier than today
+
+Cron does not have any session variable.
+
+SELECT * FROM lr_users 
+WHERE login_dt < 1491369252
+AND emailFlag1 = 0
+
 
 MY VIEWS
 Person has views
@@ -721,3 +735,36 @@ Then we put header location to redirect to user to success.php page
 
 header("Location: login_success.php");
 exit;
+
+
+
+CSS
+
+Border Radius
+
+
+4 values	topleft		topright	bottomright		bottomleft
+3 values	topleft & bottom right 		top right	bottomleft
+2 values	topleft & bottom right		topright & bottom left
+1 value		all corners
+
+
+15px / 20px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
