@@ -3,6 +3,53 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<script>
+	
+var person1 = {name: 'manny', age: 43, gender: 'male'};
+var person2 = {name: 'carrie', age: 24, gender: 'female'};
+var person3 = {name: 'kate', age: 16, gender: 'female'};
+
+var sayHello = function() {
+	console.log('hello ' + this.name);
+}
+
+var sayGoodBye = function() {
+	console.log('Goodbye ' + this.name);
+}
+
+sayHello();
+sayGoodBye();
+
+	
+sayHello.call(person1);
+sayHello.call(person2);
+sayHello.call(person3);
+	
+sayGoodBye.apply(person1);
+sayGoodBye.apply(person2);
+sayGoodBye.apply(person3);
+
+	
+//function 1
+var say = function(greeting) {
+	console.log(greeting + ' ' + this.name);
+}
+
+	
+//function 2
+var update = function(name, age, size) {
+	console.log('name is ', this.name);
+}
+
+//call
+say.call(person1, 'Hello');
+update.call(person1, 'Mango', 23, 'Large');
+
+//apply
+say.apply(person1, ['Hello']);
+update.apply(person1, ['Mango', 23, 'Large']);
+
+</script>
 </head>
 
 <body>

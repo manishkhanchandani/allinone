@@ -1016,3 +1016,79 @@ Step 4: We will create php classes and functions inside the classes and put all 
 
 
 
+
+		border-top: 60px solid blue;
+		border-bottom: 60px solid green;
+		border-left: 60px solid yellow;
+		border-right: 60px solid gray;
+		
+		
+		
+Transform CSS 3
+	A. Translate
+		transform: translate(100px, 200px);
+		
+	B. Rotate
+		transform: rotate(20deg);
+		
+	C. Scaling
+		transform: scale(2, 3);
+
+
+var person1 = {name: 'manny', age: 43, gender: 'male'};
+var person2 = {name: 'carrie', age: 24, gender: 'female'};
+var person3 = {name: 'kate', age: 16, gender: 'female'};
+
+var sayHello = function() {
+	console.log('hello ' + this.name);
+}
+
+var sayGoodBye = function() {
+	console.log('Goodbye ' + this.name);
+}
+
+sayHello();
+sayGoodBye();
+
+	
+sayHello.call(person1);
+sayHello.call(person2);
+sayHello.call(person3);
+	
+sayGoodBye.apply(person1);
+sayGoodBye.apply(person2);
+sayGoodBye.apply(person3);
+
+	
+//function 1
+var say = function(greeting) {
+	console.log(greeting + ' ' + this.name);
+}
+
+	
+//function 2
+var update = function(name, age, size) {
+	console.log('name is ', this.name);
+}
+
+//call
+say.call(person1, 'Hello');
+update.call(person1, 'Mango', 23, 'Large');
+
+//apply
+say.apply(person1, ['Hello']);
+update.apply(person1, ['Mango', 23, 'Large']);
+		
+		
+Both can be called on functions, which they run in the context of the first argument (person1)
+In call, the subsequent arguments are passed in to the function as they are,
+while apply expects the second argument to be an array.
+
+
+
+
+1. create recordset rsEdit
+2. Update form, with only password field, 
+
+
+
