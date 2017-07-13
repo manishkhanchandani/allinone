@@ -12,6 +12,7 @@ http://core.mkgalaxy.com/up/SQLyog615.rar
 design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, 
 
 
+https://giganetwebhosting.com
 
 romonacz@gmail.com
 
@@ -28,6 +29,14 @@ Now when page loads, it will show the form, user will fill the form and when use
 PHP server,
 
 when form is submitted, it goes  to the server either as POST or as GET
+
+
+
+
+css
+http://css3.bradshawenterprises.com/transitions/
+
+
 
 
 GET method, when form is submitted, it will show in url as following:
@@ -1033,6 +1042,22 @@ Transform CSS 3
 		
 	C. Scaling
 		transform: scale(2, 3);
+		
+	D. Skew
+		transform: skewX(20deg);
+		transform: skewY(20deg);
+		transform: skew(20deg, 10deg);
+	
+	E. Matrix
+		transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY);
+		transform: matrix(1, 0, 0, 1, 0, 0);
+		
+	F.  RotateX 
+		transform: rotateX(180deg);
+		RotateY
+		transform: rotateY(180deg);
+		RotateZ
+		transform: rotateZ(180deg);
 
 
 var person1 = {name: 'manny', age: 43, gender: 'male'};
@@ -1090,5 +1115,89 @@ while apply expects the second argument to be an array.
 1. create recordset rsEdit
 2. Update form, with only password field, 
 
+var daysOfWeek = [];
+
+var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+var daysOfWeek = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'); //{3}
 
 
+Important Question for Interview
+Fibonacci Series
+// 0, 1, 1, 2,  3, 5, 8, 13, 21, 34, ......
+
+
+fibonacci[2] = fibonacci[0] + fibonacci[1]; //1
+fibonacci[3] = fibonacci[1] + fibonacci[2]; //2
+fibonacci[4] = fibonacci[2] + fibonacci[3]; //3
+fibonacci[5] = fibonacci[3] + fibonacci[4]; //5
+
+var n = 20;
+
+var fibonacci = [];
+fibonacci[0] = 0;
+fibonacci[1] = 1;
+
+for (var i = 2; i < n; i++ ) {
+	fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+}
+
+function fibo(n) {
+
+	var fibonacci = [];
+	fibonacci[0] = 0;
+	fibonacci[1] = 1;
+
+	for (var i = 2; i < n; i++ ) {
+		fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+	}
+	
+	return fibonacci[n - 1];
+}
+
+
+
+
+
+CSS
+Transition, if you go from one css to another css property in slow motion, animation. 
+
+
+transition-property: width; // width or height or any other property
+transition-duration: 2s; //width: 100 -> 500, 
+transition-timing-function: ease, linear, ease-in, ease-out, ease-in-out
+
+ease: starts slow, then goes fast and then end slow
+linear: same speed
+ease-in: slow start, then fast
+ease-out: start fast, end slow
+ease-in-out: start slow and end slow, 
+
+transition-delay: 1s; //transition effect will start after 1 sec
+
+
+
+To add number or value in array, use push
+numbers.push(33);
+
+to add value in beginning of an array, use unshift
+numbers.unshift(25);
+
+to remove element from end of array we use pop, 
+var myValue = numbers.pop();
+
+and here myValue will contain that removed item.
+
+to remove item from the beginnig of the array, use shift()
+numbers.shift();
+
+
+Ticket counter: carrie, kate, manny	FIFO
+
+queue, to add, push, and to remove we us shift
+
+elevator, lift
+
+carrie, kate, manny - FILO
+
+push, pop, pop, pop
