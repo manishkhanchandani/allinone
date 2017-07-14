@@ -1201,3 +1201,158 @@ elevator, lift
 carrie, kate, manny - FILO
 
 push, pop, pop, pop
+
+
+
+#dd_main2 {
+  transition-property: top, left, border-radius, background-color;
+  transition-duration: 2s, 1s, 0.5s, 0.5s;
+  transition-delay: 0s, 0.5s, 1s, 1.5s;
+}
+
+
+Animation
+
+You@All: #dd_main2 {
+  transition-property: top, left, border-radius, background-color;
+  transition-duration: 2s, 1s, 0.5s, 0.5s;
+  transition-delay: 0s, 0.5s, 1s, 1.5s;
+}
+You@All: @keyframes name1 {
+		from {
+			background-color: red;
+		}
+		
+		to {
+			background-color: yellow;
+		}
+	}
+	
+	@keyframes name2 {
+		0% {
+			background-color: red;
+		}
+		25% {
+			background-color: yellow;
+		}
+		50% {
+			background-color: blue;
+		}
+		100% {
+			background-color: green;
+		}
+	}
+	
+	@keyframes name3 {
+		0% {
+			background-color: red;
+			left: 0px;
+			top: 0px;
+		}
+		
+		25% {
+			background-color: yellow;
+			left: 200px;
+			top: 0px;
+		}
+		
+		50% {
+			background-color: blue;
+			left: 200px;
+			top: 200px;
+		}
+		
+		75% {
+			background-color: green;
+			left: 0px;
+			top: 200px;
+		}
+		
+		100% {
+			background-color: red;
+			left: 0px;
+			top: 0px;
+		}
+	}
+	
+	.box1 {
+		width: 200px;
+		height: 200px;
+		background-color: black;
+		animation-name: name3;
+		animation-duration: 4s;
+		animation-delay: 2s;
+		animation-iteration-count: 3;
+		animation-direction: alternate;
+		animation-timing-function: ease;
+		position: relative;
+	}
+
+
+Splice
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+undefined
+numbers.splice(5, 3);
+(3) [6, 7, 8]
+numbers
+(12) [1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15]
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+undefined
+numbers.splice(7, 1);
+[8]
+numbers
+(14) [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+undefined
+numbers.splice(5, 0);
+[]
+numbers
+(15) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+var deletedRows = numbers.splice(7, 1);
+undefined
+deletedRows
+[8]
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+undefined
+numbers.splice(5, 1, 100, 101, 102);
+[6]
+numbers
+(17) [1, 2, 3, 4, 5, 100, 101, 102, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+undefined
+numbers.splice(5, 0, 2, 3, 4);
+[]
+numbers
+(18) [1, 2, 3, 4, 5, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+undefined
+numbers.splice(5, 3, 2, 3, 4);
+(3) [6, 7, 8]
+numbers
+(15) [1, 2, 3, 4, 5, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15]
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+undefined
+numbers.splice(2, 4, 1, 1, 1);
+(4) [3, 4, 5, 6]
+numbers
+(14) [1, 2, 1, 1, 1, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+
+
+
+1. Take the backup of database
+1a. upload files to the server
+
+2. Buy the domain 
+3. Buy the hosting (ns1.nameservers.net, ns2.nameservers.net)
+4. take name servers and put it inside the domain (ns1.nameservers.net, ns2.nameservers.net)
+5. then domain will be tied to hosting
+6. add a domin, in the hosting, with proper file location
+
+7. create a database on the server
+8. upload your local database to the server
+
+verify the site
+
+9. create cron jobs and do ....
+

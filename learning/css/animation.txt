@@ -1,0 +1,304 @@
+CSS3 Animations
+CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!
+
+What are CSS3 Animations?
+An animation lets an element gradually change from one style to another.
+
+You can change as many CSS properties you want, as many times you want.
+
+To use CSS3 animation, you must first specify some keyframes for the animation.
+
+Keyframes hold what styles the element will have at certain times.
+
+The @keyframes Rule
+When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+
+To get an animation to work, you must bind the animation to an element.
+
+The following example binds the "example" animation to the <div> element. The animation will last for 4 seconds, and it will gradually change the background-color of the <div> element from "red" to "yellow":
+
+Example
+/* The animation code */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+Try it Yourself »
+Note: If the animation-duration property is not specified, the animation will have no effect, because the default value is 0. 
+
+In the example above we have specified when the style will change by using the keywords "from" and "to" (which represents 0% (start) and 100% (complete)).
+
+It is also possible to use percent. By using percent, you can add as many style changes as you like.
+
+The following example will change the background-color of the <div> element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:
+
+Example
+/* The animation code */
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+/* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+Try it Yourself »
+The following example will change both the background-color and the position of the <div> element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:
+
+Example
+/* The animation code */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+Try it Yourself »
+Delay an Animation
+The animation-delay property specifies a delay for the start of an animation.
+
+The following example has a 2 seconds delay before starting the animation:
+
+Example
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+Try it Yourself »
+Set How Many Times an Animation Should Run
+The animation-iteration-count property specifies the number of times an animation should run.
+
+The following example will run the animation 3 times before it stops:
+
+Example
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+Try it Yourself »
+The following example uses the value "infinite" to make the animation continue for ever:
+
+Example
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+Try it Yourself »
+Run Animation in Reverse Direction or Alternate Cycles
+The animation-direction property is used to let an animation run in reverse direction or alternate cycles.
+
+The following example will run the animation in reverse direction:
+
+Example
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+}
+Try it Yourself »
+The following example uses the value "alternate" to make the animation first run forward, then backward, then forward:
+
+Example
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+Try it Yourself »
+Specify the Speed Curve of the Animation
+The animation-timing-function property specifies the speed curve of the animation.
+
+The animation-timing-function property can have the following values:
+
+ease - specifies an animation with a slow start, then fast, then end slowly (this is default)
+linear - specifies an animation with the same speed from start to end
+ease-in - specifies an animation with a slow start
+ease-out - specifies an animation with a slow end
+ease-in-out - specifies an animation with a slow start and end
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+The following example shows the some of the different speed curves that can be used:
+
+Example
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+Try it Yourself »
+Animation Shorthand Property
+The example below uses six of the animation properties:
+
+Example
+div {
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+Try it Yourself »
+The same animation effect as above can be achieved by using the shorthand animation property:
+
+Example
+div {
+    animation: example 5s linear 2s infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Definition and Usage
+The animation-play-state property specifies whether the animation is running or paused.
+
+Note: Use this property in a JavaScript to pause an animation in the middle of a cycle.
+
+Example
+Pause an animation:
+
+div {
+    -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+    animation-play-state: paused;
+}
+
+
+paused	Specifies that the animation is paused
+running	Default value. Specifies that the animation is running
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: mymove 5s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s;
+    animation-play-state: paused;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+</style>
+</head>
+<body>
+
+<p>Pause an animation:</p>
+<div></div>
+<p><strong>Note:</strong> The animation-play-state property is not supported in Internet Explorer 9 and earlier versions.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+Definition and Usage
+The animation-fill-mode property specifies a style for the element when the animation is not playing (when it is finished, or when it has a delay).
+
+By default, CSS animations do not affect the element until the first keyframe is "played", and then stops once the last keyframe has completed. The animation-fill-mode property can override this behavior.
+
+
+CSS3 animation-fill-mode Property
+
+
+Example
+Animate something moving from one place to another and have it stay there:
+
+div {
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+@keyframes	Specifies the animation code
+animation	A shorthand property for setting all the animation properties
+animation-delay	Specifies a delay for the start of an animation
+animation-direction	Specifies whether an animation should play in reverse direction or alternate cycles
+animation-duration	Specifies how many seconds or milliseconds an animation takes to complete one cycle
+animation-fill-mode	Specifies a style for the element when the animation is not playing (when it is finished, or when it has a delay)
+animation-iteration-count	Specifies the number of times an animation should be played
+animation-name	Specifies the name of the @keyframes animation
+animation-play-state	Specifies whether the animation is running or paused
+animation-timing-function	Specifies the speed curve of the animation
+
+
+

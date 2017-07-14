@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+	
+	@keyframes example1 {
+		from {background-color: yellow;}
+		to {background-color: blue;}
+	}
+	
+	
+	@keyframes example2 {
+		0% {
+			background-color: red;
+		}
+		
+		25% {
+			background-color: yellow;
+		}
+		
+		50% {
+			background-color: blue;
+		}
+		
+		100% {
+			background-color: green;
+		}
+	}
+	
+	@keyframes example3 {
+		0%   {background-color:orange; left:0px; top:0px;}
+		25%  {background-color:yellow; left:200px; top:0px;}
+		50%  {background-color:blue; left:200px; top:200px;}
+		75%  {background-color:green; left:0px; top:200px;}
+		100% {background-color:black; left:0px; top:0px;}
+	}
+
+	
+	div {
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		position: relative;
+		animation-name: example3;
+		animation-duration: 2s;
+		animation-fill-mode: both;
+	}
+</style>
+</head>
+
+<body>
+<div class="box1">
+	
+</div>
+</body>
+</html>

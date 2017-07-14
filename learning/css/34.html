@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+	@keyframes name1 {
+		from {
+			background-color: red;
+		}
+		
+		to {
+			background-color: yellow;
+		}
+	}
+	
+	@keyframes name2 {
+		0% {
+			background-color: red;
+		}
+		25% {
+			background-color: yellow;
+		}
+		50% {
+			background-color: blue;
+		}
+		100% {
+			background-color: green;
+		}
+	}
+	
+	@keyframes name3 {
+		0% {
+			background-color: red;
+			left: 0px;
+			top: 0px;
+		}
+		
+		25% {
+			background-color: yellow;
+			left: 200px;
+			top: 0px;
+		}
+		
+		50% {
+			background-color: blue;
+			left: 200px;
+			top: 200px;
+		}
+		
+		75% {
+			background-color: green;
+			left: 0px;
+			top: 200px;
+		}
+		
+		100% {
+			background-color: red;
+			left: 0px;
+			top: 0px;
+		}
+	}
+	
+	.box1 {
+		width: 200px;
+		height: 200px;
+		background-color: black;
+		animation-name: name3;
+		animation-duration: 4s;
+		animation-delay: 2s;
+		animation-iteration-count: 3;
+		animation-direction: alternate;
+		animation-timing-function: ease;
+		position: relative;
+	}
+</style>
+</head>
+
+<body>
+<div class="box1">
+	
+</div>
+</body>
+</html>
