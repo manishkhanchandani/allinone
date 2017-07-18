@@ -78,6 +78,7 @@ function facebookLogin() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       var token = result.credential.accessToken;
+      console.log('token is ', token);
       // The signed-in user info.
       var user = result.user;
       console.log(user);
@@ -111,7 +112,9 @@ function twitterLogin() {
       // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
       // You can use these server side with your app's credentials to access the Twitter API.
       var token = result.credential.accessToken;
+      console.log('token is ', token);
       var secret = result.credential.secret;
+      console.log('secret is ', secret);
       // The signed-in user info.
       var user = result.user;
       
@@ -145,6 +148,7 @@ function gitHubLogin() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a GitHub Access Token. You can use it to access the GitHub API.
       var token = result.credential.accessToken;
+      console.log('token is ', token);
       // The signed-in user info.
       var user = result.user;
       
@@ -157,7 +161,6 @@ function gitHubLogin() {
       userData.uid = user.providerData[0].uid;
       userData.providerId = user.providerData[0].providerId;
       userData.token = token;
-      userData.secret = secret;
       console.log('git hub userData: ', userData);
       // ...
     }).catch(function(error) {

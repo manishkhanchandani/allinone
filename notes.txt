@@ -12,6 +12,10 @@ http://core.mkgalaxy.com/up/SQLyog615.rar
 design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, 
 
 
+ tamil.karun@gmail.com, johnny.ly209@gmail.com
+ 
+ 
+
 https://giganetwebhosting.com
 
 romonacz@gmail.com
@@ -1355,4 +1359,84 @@ numbers
 verify the site
 
 9. create cron jobs and do ....
+
+
+
+
+9.30 to 10 
+Project PHP, Javascript , mysql, .....
+100 Projects in 
+
+
+
+9 to 9.30
+Life reminder (wed)
+Javascript / CSS
+
+Creation of Database and Tables
+Mysql Database
+
+
+Title
+Description
+Images
+
+Category
+
+Extra Data
+
+Table 1
+users
+
+
+10 to 20 projects
+
+My Religion
+Jesus Christ, put his views, 
+
+
+Every human being have some views, those who like my views will be my followers
+
+
+Kate comes to my website,
+
+	Create Your Religion (Kate's Religion)
+		Fill the form
+		Submit
+		
+	Add the views 
+		100, eat non -veg	category (food)
+			Robbery is wrong	category (humanity)
+			
+			Humanity	1
+			Food		2
+			Education	3
+			Marriage	4
+			Polictics	5
+			
+			10 to 15 hard 
+			
+	Followers, 
+		Manny 
+		Carrie
+		Tamil
+		Johnny
+		
+		
+	Likes
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
 
