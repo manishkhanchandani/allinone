@@ -9,10 +9,15 @@ https://tortoisegit.org/download/
 http://core.mkgalaxy.com/up/SQLyog615.rar
 
 
-design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, 
+design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com
+
+https://www.youtube.com/playlist?list=PLj5NkfRb803ymkZcZi3gBplnsMD5RLNMt
 
 
- tamil.karun@gmail.com, johnny.ly209@gmail.com
+design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, tamil.karun@gmail.com, johnny.ly209@gmail.com, madesh.shk@gmail.com
+
+https://www.youtube.com/watch?v=oQqpcn2uOms&list=PLj5NkfRb803zeb-LO2WUcPHpT8fkvF17z&index=3
+
  
  
 
@@ -1427,16 +1432,146 @@ Kate comes to my website,
 		
 			
 
+Remedy Finder (rf_)
+	User will come
+		
+		User A - Kidney Stones
+		
+			He got cured of his problem
+			
+			Put disease name
+			Which Allopathy, Ayurvedic, Acupuncture, Magnet Therapy, Reiki, Homeopathy, Surgery, Diet Change, ....
+			What medicine he took: Medicine A, medicine B, Don't know, H7, K9, 2 magnets were kept at abdomen region
+			Relief or Permanant Cure, or Temporary Cure, Then Problem Reappears
+			
+			Description
+			
+		Comments
+			Oh really, you got cured with it
+			
+		
+	Admin will check any bad comments or any illogical treatment.
+	
+	
+		'allopathy','surgery','ayurvedic','acupressure', 'acupuncture','aromatherapy','balneotherapy','biofeedback','chiropractic', 'homeopathy','naturopathy','reflexology','reiki','magnetotherapy','massagetherapy'
+	 
+
+
+City Ecommerce Website
+ce_
+
+	Country
+		States
+		
+			
+			City
+			
+			20,000 in US
+			
+			Each city will have one owner
+				Kate is owner of Fremont
+				Carrie is owner of San Mateo
+				Tamil is owner of Union City
+				Johnny is owner of San Jose
+
+
+		Job of Each city owner is to collect all the product for his city
+		
+			Walmart			100		
+			Indian Store	50
+			Furniture		50
+			Target			50
+			Home Depot		50
+			
+			categories
+				
+				
+				Furniture
+					Kitchen
+						Utensils
+						Kitchen Board
+					Hall Furniture
+				
+				Sports
+					Outdoor
+						Cricket
+						Badminton
+					Indoor
+						Carrom
+						Chess
+						
+				Father
+					Child1
+						Grandson1
+						Grandson2
+					Child2
+				
+				
+			category_id, 	category			parent_id
+			1				Furniture			0
+			2				Kitchen Furniture	1
+			3				Hall Furniture		1
+			4				Utensils			2
+			5				Kitchen Board		2
+			6				Sports				0
+			7				Outdoor				6
+			8				Indoor				6
+			9				Cricket				7
+			10				Badminton			7
+			11				Carrom				8
+			12				Chess				8
+			13				Father				0
+			14				Child1				13
+			15				Child2				13
+			16				Grandson1			14
+			17				Grandson2			14
+			
+			
+			Standard Shipping, $5
+			Cash on Delivery /  Paypal on Delivery
+			
+			Fremont Store
+				100 items and she will put that in website
+				50 item and she will put in her website
+
+100 projects in PHP, Mysql, Firebase, HTML, CSS, Javascript, Jquery, Angular and React
+
+Building DB
+
+
+Products
+	1. Milk
+	2. Sugar
+	3. Salt
+
+Fremont Store Owner
+	Number		Price	Shipping	stock
+	1 			$2.99		0			10
+	2			$2.15
+	3			$1.00
+	
+	
+	
+Oakland store Owner
+	1			$2.78					20
+	
+	3			$1.12
 
 
 
 
+Jobs Website
 
 
 
 
-
-
-
+1. Dating + Horoscope
+2. Real Estate Website - buy and selling
+3. Restaurants with menu options, ordering, table booking, likes, say bad reviews to owner, review for particular date
+4. Apartment renting - renting
+5. Flying, airel tour
+6. Clothes website
+7. Record of Patients, medical records
+8. Halloween, Renting 
 
 
