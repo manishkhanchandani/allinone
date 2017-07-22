@@ -1566,12 +1566,76 @@ Jobs Website
 
 
 1. Dating + Horoscope
-2. Real Estate Website - buy and selling
-3. Restaurants with menu options, ordering, table booking, likes, say bad reviews to owner, review for particular date
-4. Apartment renting - renting
-5. Flying, airel tour
-6. Clothes website
-7. Record of Patients, medical records
-8. Halloween, Renting 
+	dating_id,
+	user_id
+	
+	display_dating_name
+	gender
+	height
+	weight
+	
+	birth_year
+	birth_month
+	birth_day
+	birth_hour
+	birth_minute
+	birth_place
+	
+	marital_status
+	description
+	
+	display_images
+	
+	hobbies
+	
+	location
+		dating_city
+		dating_state
+		dating_country
+		dating_lat
+		dating_lng
+	
+	dating_created_dt
 
+2. Real Estate Website - buy and selling
+4. Apartment renting - renting
+7. Record of Patients, medical records
+
+	Table 1
+		name, family, history, past history, description, gender, code
+		
+	Table 2	Medical Report
+		date	blood test or xray or sonography	Result		upload the file
+		
+	Table 3	Daily Readings
+		date	bp	diabetes	weight	
+	
+	Table 4	Medicine
+		starting_date	medicine
+
+
+
+
+Netflix using Youtube
+	Make netflix website with youtube videos
+	
+	
+Medical Field
+	Every person suffers from some disease in day to day life
+	
+	
+
+
+"google.com","facebook.com","twitter.com","github.com"
+
+
+
+
+
+
+
+3. Restaurants with menu options, ordering, table booking, likes, say bad reviews to owner, review for particular date
+6. Clothes website
+8. Halloween, Renting 
+5. Flying, airel tour
 
