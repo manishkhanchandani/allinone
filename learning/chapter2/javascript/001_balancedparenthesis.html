@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script>
+/*
+Stacks can be used to check a program for balanced symbols such as {}, (), []. The closing symbol should be matched with the most recently seen opening symbol.
+
+Example {()} is legal, {()({})} is legal but {((} and {(}) are not legal
+*/
+
+function isBalancedParenthesis(expn) {
+	console.log('expn is ', expn);
+	var stk = [];
+	var pp;
+	for (var index = 0; index < expn.length; index++) {
+		var ch = expn[index];
+		console.log('ch at index: ', index, ', is ', ch);
+		switch (ch) {
+			case '{':
+			case '[':
+			case '(':
+				stk.push(ch);
+				console.log('index: ', index, ', ch: ', ch);
+				break;
+			case '}':
+				pp = stk.pop();
+				console.log('pop is ', pp);
+				console.log('stk is ', stk);
+				if (pp !== '{') {
+					return false;
+				}
+				console.log('match found for ', pp, ' is ', ch);
+				break;
+			case ']':
+				pp = stk.pop();
+				console.log('pop is ', pp);
+				console.log('stk is ', stk);
+				if (pp !== '[') {
+					return false;
+				}
+				console.log('match found for ', pp, ' is ', ch);
+				break;
+			case ')':
+				pp = stk.pop();
+				console.log('pop is ', pp);
+				console.log('stk is ', stk);
+				if (pp !== '(') {
+					return false;
+				}
+				console.log('match found for ', pp, ' is ', ch);
+				break;
+		}
+	}
+	
+	console.log(stk);
+	return stk.length;
+}
+
+var result = isBalancedParenthesis('(){[()]()}');
+
+console.log('result is ', result);
+ result = isBalancedParenthesis('(){[()]()}{');
+
+console.log('result is ', result);
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <?php
 //don't use this file, use token.php
-include('../functions.php');
+include('../../functions.php');
 define('APIKEY', 'AIzaSyDnERUhALUFNxWZsjaLpT4_nqIYW2i2jDU');
 $url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyAssertion?key='.APIKEY;
 

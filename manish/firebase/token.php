@@ -1,5 +1,5 @@
 <?php
-include('../functions.php');
+include('../../functions.php');
 define('APIKEY', 'AIzaSyDnERUhALUFNxWZsjaLpT4_nqIYW2i2jDU');
 $url = 'https://securetoken.googleapis.com/v1/token?key='.APIKEY;
 
