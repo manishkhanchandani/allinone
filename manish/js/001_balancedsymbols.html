@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script>
+//valid symbols {}, (), []
+//if else, stacks, push and pop
+/*
+
+Step 1: I will take the string with different symbols like {}
+Step 2: I will go through each of the character in the string
+Step 3: If I find opening tags like { I will push that symbol into an array
+Step 4: If I find closing tags like }, I will do array.pop and check the value which comes out of array.pop and see if it is equal to { for each case i.e. } respectively and if it not equal to { then return false and false means braces don't match
+Step 5: if in the end, my array has zero elements then the braces are matching and if i get more than zero element for array then braces are not matching
+*/
+
+
+
+
+function balancedSymbols(str) {
+	console.log('string is ', str);
+	console.log('length is ', str.length);
+	var arr = [];
+	var x = '';
+	
+	for (var i = 0; i < str.length; i++) {
+		console.log('i is ', i, ', and value is ', str[i]);
+		if (str[i] == '{' || str[i] == '(' || str[i] == '[') {
+			arr.push(str[i]);
+		} else if (str[i] == '}') {
+			x = arr.pop();
+			console.log('x is ', x);
+			if (x != '{') { // if x is not equal to {, that means parenthesis are not balanced.
+				return false; //false means braces don't match
+			}
+		} else if (str[i] == ')') {
+			x = arr.pop();
+			console.log('x is ', x);
+			if (x != '(') {
+				return false;
+			}	
+		} else if (str[i] == ']') {
+			x = arr.pop();
+			console.log('x is ', x);
+			if (x != '[') {
+				return false;
+			}
+		}
+		//if i have array element = 0, then braces match and if array element is > 0 then braces don't match
+		console.log('array is ', arr);
+	}
+	
+	return arr.length; // if length is 0 then we have balanced braces else we have imbalance braces
+}
+
+var result = balancedSymbols('{{([])}');
+
+console.log('result is ', result);
+
+if (result === 0) {
+	console.log('braces matches');
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

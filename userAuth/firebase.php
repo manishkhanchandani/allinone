@@ -11,7 +11,7 @@ pr($_SESSION);
 <title>Untitled Document</title>
 <script src="jquery-3.2.1.js"></script>
 <script>
-function postJson(url, params={}, callback, callbackFailed)
+function postJson(url, params, callback, callbackFailed)
 {
 	var jqxhr = $.ajax({
 		url:url,
@@ -19,6 +19,32 @@ function postJson(url, params={}, callback, callbackFailed)
 		data: JSON.stringify(params),
 		contentType:"application/json; charset=utf-8"}
 		)
+	  .done(callback)
+	  .fail(callbackFailed)
+	  .always(function() {
+		console.log( "finished" );
+	  });
+}
+
+function post(url, params, callback, callbackFailed)
+{
+	var jqxhr = $.ajax({
+		url:url,
+  		type:'POST',
+		data: params,
+		})
+	  .done(callback)
+	  .fail(callbackFailed)
+	  .always(function() {
+		console.log( "finished" );
+	  });
+}
+function get(url, callback, callbackFailed)
+{
+	var jqxhr = $.ajax({
+		url:url,
+  		type:'GET',
+		})
 	  .done(callback)
 	  .fail(callbackFailed)
 	  .always(function() {

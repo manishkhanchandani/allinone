@@ -1692,4 +1692,45 @@ uid
 
 
 
+Javascript
+
+Balanced symbols, symbols, you have to write a program to check if the symbol is balanced or not
+
+{(})	fail, it not balanced
+{()}	pass, it is balanced
+
+
+
+
+Facebook
+	bad guy
+		delete
+
+
+User logs in, I put his details in 
+
+$_SESSION['username'] = 'manny';
+$_SESSION['user_id'] = 1;
+
+
+Login we always save the details of the user
+
+$_SESSION['MM_Username'] = 'manny@mkgalaxy.com';
+$_SESSION['MM_UserGroup'] = 'member';
+$_SESSION['MM_UserId'] = 1;
+$_SESSION['MM_DisplayName'] = '';
+$_SESSION['MM_ProfileImg'] = '';
+$_SESSION['MM_UID'] = '';
+$_SESSION['MM_LoggedInTime'] = '';
+$_SESSION['MM_ProfileUID'] = '';
+
+
+Api will insert the record into the database
+Session variables 
+
+
+
+
+
+
 
