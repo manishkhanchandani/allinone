@@ -1728,6 +1728,248 @@ $_SESSION['MM_ProfileUID'] = '';
 Api will insert the record into the database
 Session variables 
 
+Mobile First Design
+
+
+
+
+
+
+
+Facebook -> login and put some thing on your wall
+
+Here we have ask user to login and then enter or create new religion
+
+
+Views
+	1	Eating non veg is not good
+	2	Watching TV is not good for health
+	
+	Manny's Religion
+		Eating non veg is not good
+		Watching TV is not good for health
+	
+	Kate's Religion
+		Eating non veg is not good
+		Watching TV is not good for health
+	
+	
+	URL $_GET['religion_id']
+
+Donation, Food Donation, Ads
+
+User will come and he will add his religion
+
+	A person will come and create a religion
+		Religion Name
+		Religion Description
+		
+		Status: Pending, Approved, Blocked
+				0, 		 1, 		-1
+	
+	
+	
+
+	A religion		- Pending Status		- Admin
+	B religion		- Pending Status		- Admin
+	
+	Hindu Religion
+	
+		Public Religion
+			Views
+	
+	Public Religion
+		any one can add the views
+		
+	Protected Religion
+		only user who created the religion can add the views
+		
+		Active / Inactive
+		
+		
+	All the views created should go to admin and admin will approve
+		
+	Visible for users
+		
+		
+		A Religion
+			copy this religion to me, all the views of this religion will be copied to religion B
+			choose some of the views or individual views and copy it to my religion
+			
+			Follower of that religion
+			
+			Views - like the view
+		B Religion
+		
+		
+	Images URL, Youtube videos, PDF or links
+	
+	If some one changes the views or religion, the status will change to pending,
+	
+	
+	
+	User can comment on religion 	process through admin
+	or User can comment on any of the views	process through admin
+	
+	Ban Users (we will think on it)
+	
+	
+	
+REACT JS
+
+UI component, It is used to build user interfaces 
+
+Link React app to the PHP backend
+
+JSX
+.jsx
+.js
+
+Components
+
+We create lot of components
+
+
+MVC framework, 
+Model, View, Controller, 
+
+React - View part of MVC framework
++
+Redux is framework on top of react,
+
+
+Angualar is bidirectional 
+
+React is unidirectional
+
+Component
+	variable
+	
+	show it on view
+	
+	Inside the javascript - Virtual Dom
+	<div>, but it is virtual div tag
+
+	<div and then manipulate it
+	
+	you create div with manipulation, 
+	
+	
+	
+	
+Whenever we want to view something from the database,
+We create a Recordset
+
+Dynamic Table
+Pagination
+
+
+
+Build whole website which is in php, in api -> outputs all the data in json format
+
+
+Soft Delete
+	flag = 0, otherwise flag = 1
+
+Hard Delete
+	deleting from the database, it is called hard delete
+
+
+
+
+
+
+
+
+A. STATE
+B. PROP
+
+
+
+
+
+
+Opinion Page
+
+create_views.php
+
+Functionalities
+
+1. Restrict access to the site
+2. All get the record for the religion with religion_id
+	checking for the page
+	
+	a. if this record has status of approved
+	b. if status is deleted (2), then don't show view page or religion page to owner and anyone on the site.
+	c. , and if it not approved then i will check if logged in user is owner of this religion
+
+	c. if it is public, allow any one to add
+	d. if it is closed, allow only owner of religion to add the record
+
+
+	Steps
+		Before I insert it
+		
+		I have list of all bad words,
+		
+		I go through the text which is submitted by the user, regexp, php can recognize the all the bad words, and delete those words and then subtmit the result to the database.
+
+
+
+
+
+A. Insert new opinion / views
+
+
+views.php
+B. All the list of Views
+
+Religion
+0 = Pending
+1 = approved
+2 = blocked
+3 = deleted
+
+Views
+
+0 - not approved
+1 - approved
+2 - blocked
+3 - deleted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+State
+	create a variable in the state, and you can update the variable in the state, 
+	
+Props
+	cannot create the variable,
+	you only get variables from somewhere
+	only for showing the data, no update allowed, no insert allowed, only carry data from one place to another for showing purpose.
+
+
+
+
+
+
 
 
 
