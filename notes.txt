@@ -20,6 +20,9 @@ https://www.youtube.com/watch?v=oQqpcn2uOms&list=PLj5NkfRb803zeb-LO2WUcPHpT8fkvF
 
  
  
+ankita.iu07@gmail.com 
+ 
+ 
 
 https://giganetwebhosting.com
 
@@ -1964,6 +1967,64 @@ Props
 	cannot create the variable,
 	you only get variables from somewhere
 	only for showing the data, no update allowed, no insert allowed, only carry data from one place to another for showing purpose.
+
+
+
+
+	create variable (state)
+		constructor (props)
+			super(props)
+			
+			
+			functions inside component to update the state
+			
+			
+			once state is updated, render function is called again
+			
+			this.setState({username: 'new value'});
+			
+	When we change the state, then render is called again
+
+
+Food Donation
+	React JS + Firebase
+	PHP + Mysql
+
+Make at home, he has extra food and if any one want to get it, then can come to this address to pickup, 
+
+
+Religion
+	
+	Register / Login to website
+	
+	New Religion
+		Admin in pending state, admin approve it
+	
+	Verse
+		Verse's will pass to admin, admin has to approve it.
+		
+	It will be viewed to the user, and user can copy any verse in his religion, user can like any verse, 
+	user can follow the religion
+	
+
+index.php 	religion 
+follow_religion.php	follow
+
+
+verse.php	views
+verse_like.php likes
+
+
+
+
+
+Detail Page of Religion
+
+Some details of Religion
+
+Bottom Part of page will have all the verses
+
+
 
 
 
