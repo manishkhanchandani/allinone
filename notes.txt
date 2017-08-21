@@ -14,14 +14,14 @@ design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanc
 https://www.youtube.com/playlist?list=PLj5NkfRb803ymkZcZi3gBplnsMD5RLNMt
 
 
-design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, tamil.karun@gmail.com, johnny.ly209@gmail.com, madesh.shk@gmail.com
+design9992@gmail.com, carrieparecki@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com, tamil.karun@gmail.com, johnnyly311@gmail.com, madesh.shk@gmail.com
 
 https://www.youtube.com/watch?v=oQqpcn2uOms&list=PLj5NkfRb803zeb-LO2WUcPHpT8fkvF17z&index=3
 
  
  
-ankita.iu07@gmail.com 
- 
+ankita.iu07@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com
+johnny.ly209@gmail.com
  
 
 https://giganetwebhosting.com
@@ -30,6 +30,12 @@ romonacz@gmail.com
 
 Every day, we do some css, some javascript, backend php & mysql
 Angular or React 
+
+
+web class 2017-08-19
+
+sindhu.pathfinder@gmail.com, kethineni9999@gmail.com, design9992@gmail.com, manishkk74@gmail.com, nikhilkhanchandani@gmail.com
+
 
 
 Server Behavior is showing Insert Record in the box
@@ -2030,10 +2036,78 @@ Bottom Part of page will have all the verses
 
 
 
+Load the page
+	Ajax1Assignments
+		
+			assignments: 	0: data1
+									Ajax2Submission(data1.id)
+										submissions[0] : 	0: datax
+															1: datay
+															2: dataz
+									
+							1: data2
+									Ajax2Submission(data2.id)
+										submissions[1]: 	0: datax
+															1: datay
+															2: dataz
+															3: datab
+							
+							
+							
+Religion: 1
+
+Verse: 1
 
 
 
 
 
+
+
+Religion: 2
+
+Verse: 2
+	From_Religion: 1
+	From_Verse: 1
+
+
+
+Copy Page
+	All my religions
+	
+	
+
+
+
+
+
+this.state.submissions
+
+
+
+
+
+
+select * from religions_view left join religions_like ON religions_view.view_id = religions_like.view_id AND religions_like.like_user_id = 1 
+WHERE religions_view.religion_id = 2 AND religions_view.view_status = 1;
+
+https://github.com/design9992/assignment
+
+
+
+
+Sass
+http://sass-lang.com/install
+
+https://rubyinstaller.org/downloads/
+Install Ruby 
+
+gem -v
+
+and then install following
+gem install sass
+
+check verison
+sass -v
 
 
