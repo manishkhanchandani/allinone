@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td valign="top"><strong>Sass</strong></td>
+    <td valign="top"><strong>Less</strong></td>
+  </tr>
+  <tr>
+    <td valign="top">Variable Creation </td>
+    <td valign="top">$color1: red; </td>
+    <td valign="top">@color1: blue; </td>
+  </tr>
+  <tr>
+    <td valign="top">Nesting</td>
+    <td valign="top"><p>body {</p>
+    <p> h1 {</p>
+    <p>} </p>
+    <p>} </p></td>
+    <td valign="top"><p>body {</p>
+      <p> h1 {</p>
+      <p>} </p>
+    <p>} </p></td>
+  </tr>
+  <tr>
+    <td valign="top">Mixins</td>
+    <td valign="top"><p><strong id="docs-internal-guid-aba6163b-3687-674d-a12a-9077b449ca43">@mixin name {<br />
+        <br />
+    }</strong></p>
+    <p><strong id="docs-internal-guid-aba6163b-3687-8935-42d5-8fc0fe088599">@mixin cssProperties {<br />
+&nbsp;color: blue;<br />
+&nbsp;background: green;<br />
+&nbsp;line-height: 1.8;<br />
+}</strong></p>
+    <p>.box1 {</p>
+    <p>@include cssProperties(); </p>
+    <p>} </p>
+    <p>&nbsp;</p>
+    <p>.box1 {</p>
+    <p>}</p>
+    <p>.box2 {</p>
+    <p>@extend .box1;</p>
+    <p>}  </p></td>
+    <td valign="top"><p>.box1 {</p>
+    <p>}</p>
+    <p>.box2 {</p>
+    <p>.box1;</p>
+    <p>}  </p></td>
+  </tr>
+</table>
+</body>
+</html>

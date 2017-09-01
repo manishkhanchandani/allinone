@@ -1,0 +1,9 @@
+.box1 {
+  width: 300px;
+}
+.box1 .box2 {
+  color: blue;
+}
+.box1 .box2 .box3 {
+  height: 400px;
+}

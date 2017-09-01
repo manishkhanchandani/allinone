@@ -1,0 +1,13 @@
+.box1 {
+  border: 1px solid blue;
+}
+body {
+  color: blue;
+}
+body h1 {
+  color: white;
+  border: 1px solid blue;
+}
+body h1 p {
+  color: gray;
+}

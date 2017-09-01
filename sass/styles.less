@@ -1,0 +1,17 @@
+@color1: blue;
+
+.box1 {
+  border: 1px solid blue;
+}
+
+body {
+  color: @color1;
+
+  h1 {
+    color: white;
+    .box1;
+    p {
+      color: gray;
+    }
+  }
+}

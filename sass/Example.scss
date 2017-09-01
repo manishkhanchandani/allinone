@@ -1,0 +1,15 @@
+$width: 300px;
+$color: blue;
+$height: 400px;
+
+.box1 {
+  width: $width;
+
+  .box2 {
+    color: $color;
+
+    .box3 {
+      height: $height;
+    }
+  }
+}

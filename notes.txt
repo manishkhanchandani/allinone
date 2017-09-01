@@ -2111,3 +2111,255 @@ check verison
 sass -v
 
 
+
+SASS & SCSS
+
+
+$color: #ccc;
+
+.box1 {
+	height: 200px;
+	width: 200px;
+	color: $color;
+}
+
+.box2 {
+	height: 250px;
+	width: 350px;
+	color: $color;
+}
+
+Variables
+
+$width: 600px;
+$float: 1.5;
+$int: 20;
+
+$string1: '../images/hello.jpg';
+$string2: "../images/hello.jpg";
+$string3: no-repeat;
+
+$color1: gray;
+$color2: #ccc;
+$rgb: rgb(230, 230, 230);
+$rgba: rgb(230,230, 230, 0.3);
+
+less & sass,
+
+scss or sass or less
+
+output is CSS, 
+
+
+<div class="box1">
+	<div class="box2">
+		hello world
+	</div>
+</div>
+
+.box2 {
+
+}
+
+.box1 .box2 {
+
+}
+
+
+1. Variables
+$name: 'value'
+
+2. Nesting
+
+	nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    color: blue;
+  }
+  
+  a {
+    display: block;
+    
+    span {
+      color: gray;
+    }
+  }
+}
+
+3. Mixins
+
+@mixin kate() {
+	color: pink;
+	border: 1px solid blue;
+}
+
+@mixin carrie() {
+	color: red;
+	border: 2px solid gray;
+}
+
+
+.box1 {
+	@include kate();
+	background-color: white;
+}
+
+.box2 {
+	@include kate();
+}
+
+
+.box3 {
+	@include carrie();
+}
+
+4. Extend
+
+we extend the current css selector into another selector
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+  @extend .message;
+}
+.error {
+  border-color: red;
+  @extend .message;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Religious Belief's
+Faith – It does not make things easy, it makes them possible.
+Free Trip to heaven. Details Inside.
+God can hear you.
+God has a great plan for your life.
+God is stronger than my circumstances.
+I believe in God. Never panic, just pray.
+If God is for us, Who can be against us?
+
+Know God, Know Peace; No God, No Peace.
+People are like tea bags — you have to put them in hot water before you know how strong they are.
+
+
+
+
+
+1. Install Ruby on windows machine, mac already have rube installed.
+
+After installation of ruby, you will get 3 options, choose 1 and press enter, then choose 2 and press enter and then choose 3 and press enter
+
+go to cmd prompt and type gem -v
+2.6.11
+
+gem install sass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Developers
+	1. Image	developer_image[]		developer_image[0], developer_image[1], developer_image[2]
+	2. Name		developer_name[]		
+	3. Designation	developer_designation[]
+	4. Description	developer_description[]
+	5. fburl	developer_fb[]
+	6. tw		developer_tw[]
+	7. ln		developer_ln[]
+	8. gp		developer_gp[]
+	
+	
+developer_image[]
+developer_image[0]		kate's image
+
+developer_image[]
+developer_image[1]		manny's image
+
+developer_name[]
+developer_name[0]		kate's name
+
+developer_name[]
+developer_name[1]		manny's name
+
+developer_designation[]
+developer_designation[0] kate's designation
+
+developer_designation[1] manny's designation
+
+
+for (developer_name) {
+	
+		0 	kate
+		1	manny
+		
+		developer_image[0]
+		developer_image[1]
+		
+		developer_designation[0]
+		
+		developer_designation[1]
+}
+
+
+
+
+
+
+Gather all the data of developer and convert into json
+
+
+Version 1 on monday, tuesday
+
