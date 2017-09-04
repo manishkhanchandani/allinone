@@ -1,0 +1,17 @@
+19. What is output in the following code?
+
+var x = 0; y = 50;
+
+do {
+	y--;
+	x++;
+} while(x < 10)
+
+alert('x is : ' x + ' and y is ' + y);
+
+A. x is 13 and y is 43
+B. x is 12 and y is 42
+C. x is 11 and y is 41
+D. x is 10 and y is 40
+
+D is answer
