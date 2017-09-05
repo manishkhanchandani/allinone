@@ -15,3 +15,109 @@ C. x is 11 and y is 41
 D. x is 10 and y is 40
 
 D is answer
+
+20. What is the output in the following code?
+
+for (var num = 1; num < 10; num++) {
+	document.write(num + " ");
+	if (num % 5 == 0) 
+		break;
+}
+
+A. 1 2
+B. 1 2 3
+C. 1 2 3 4
+D. 1 2 3 4 5
+
+D is answer
+
+21. What is the output in the following code?
+for (var num = 1; num < 7; num++) {
+	if (num == 5)
+		continue;
+	document.write(num + ' ');
+}
+
+A. 1 2 3 4 5
+B. 1 2 3 4 6
+C. 1 2 3 4 7
+D. 1 2 3 4 8
+
+B is answer
+
+22. Which is correct in creating an array?
+
+A. var a = new Array{'A', 'B', 'C'};
+B. var a = new Array('A', 'B', 'C);
+C. var a = new Array['A', 'B', 'C'];
+D. var a = new Array<'A', 'B', 'C'>;
+
+B is answer
+
+23. Which line is not correct in the following code?
+var a = new Array(); //line 1
+a[0] = 'A'; // line 2
+a[1] = 'B';
+var arraySize = a.length(); //line3
+alert(arraySize); // line 4
+
+A. line1
+B. line2
+C. line3
+D. line4
+
+C is answer
+
+24.  Which line is not correct in the following code?
+
+var a = new Array(1, 2, 3); //line1
+alert(a[1]); // line 2
+alert(a[2]); //line 3
+alert(a[3]); // line 4
+
+A. line1
+B. line2
+C. line3
+D. line4
+
+D is answer
+
+25. What is the output in the following code?
+var a = new Array();
+a[0] = "A";
+a[1] = "B";
+a[2] = "C";
+alert(a.join(' - '));
+
+A. A B C
+B. A, B, C
+C. A - B - C
+D. "A", "B", "C"
+
+C is answer
+
+26. Which following statement is correct?
+Array.slice(var m, var n);
+
+A. return elements from m to n
+B. return elements from m-1 to n-1
+C. return elements from m-1 to n.
+D. return elements from m to n-1.
+
+Explanation
+var fruits = ["A", "B", "C", "D", "E", "F"];
+var x = fruits.slice(1, 3);
+The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
+B, C
+
+D is answer
+
+27. If the getMonth() returns 11, it means __?
+
+A. September
+B. October
+C. November
+D. December
+
+D is answer
+

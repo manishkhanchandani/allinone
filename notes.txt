@@ -2361,5 +2361,43 @@ for (developer_name) {
 Gather all the data of developer and convert into json
 
 
+React JS next monday
+
+Installation
+	5 min
+	Installation
+	
+Component
+	15 min
+		Component
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Version 1 on monday, tuesday
 
