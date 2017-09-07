@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script>
+function swap(kate, carrie) {
+	console.log('kate is ',kate, ' and carrie is ', carrie);
+	var manny = kate;
+	//what will money for manny: 10, kate's money: 0, carrie's money: 20
+	kate = carrie;
+	//manny's money: 10, kate's money: 20, carrie's money: 0
+	carrie = manny;
+	//manny's money: 0, kate's money: 20, carrie's money: 10
+	console.log('kate is ',kate, ' and carrie is ', carrie);
+	
+}
+
+
+function swap2(x, y) {
+	console.log('x is ',x, ' and y is ', y);
+	var temp = x;
+	//what will money for manny: 10, kate's money: 0, carrie's money: 20
+	x = y;
+	//manny's money: 10, kate's money: 20, carrie's money: 0
+	y = temp;
+	//manny's money: 0, kate's money: 20, carrie's money: 10
+	console.log('x is ',x, ' and y is ', y);
+	
+}
+
+// kate, carrie and manny
+//kate has $1, carrie has $2
+// manny = kate, manny has $1
+// kate will take money from carrie $2
+//carrie will take money from manny, $1
+
+swap(10, 20);
+swap2(1, 2);
+
+function swap3(x, y) {
+	console.log('x is ',x, ' and x is ', x);
+	
+	x = x + y;	//25
+	
+	y = x - y;  // 25 - 10 = 15
+	x = x - y;	// 25 - 15 = 10
+	
+	console.log('x is ',x, ' and x is ', x);
+	
+}
+
+/*
+	kate = carrie
+*/
+swap3(15, 10);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
