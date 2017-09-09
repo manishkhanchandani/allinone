@@ -2375,6 +2375,31 @@ Component
 
 
 
+Git repository
+	1. every one will commit 
+	2. 
+	
+	learn
+		kate
+			project1
+			project2
+			project3
+			...
+		carrie
+		manny
+		
+	food_donation
+	car_number_messaging
+	...
+	
+	...
+	..
+	..
+	..
+	..
+	
+	
+	search box
 
 
 
@@ -2399,5 +2424,6 @@ Component
 
 
 
-Version 1 on monday, tuesday
+
+
 

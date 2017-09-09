@@ -121,3 +121,85 @@ D. December
 
 D is answer
 
+
+28. To obtain Greenwich Mean Time, use ___
+
+A. toGMTString()
+B. getUTCHours()
+C. getTimeZoneOffset()
+D. getTime()
+
+A is answer
+
+29. What is the meaning of "window.settimeout("myfunction()", 10000)?
+
+A. calls myFunction every 10000 seconds
+B. calls myFunction every 1000 seconds
+C. calls myFunction every 100 seconds
+D. calls myFunction every 10 seconds
+
+
+D is answer
+
+30. Which following function is not correct?
+
+A. setDate()
+B. setMonth()
+C. setYear()
+D. setHour()
+
+C is answer
+
+31. "3 > 5 && false" return ___ ?
+
+A. true
+B. false
+C. 1
+D. -1
+
+B is answer
+
+32. Which following statement of Math method is not correct?
+
+A. ceil() returns an integer that is greater than or equals to its argument 
+B. log() returns a natural logarithm of a number
+C. sqrt() returns a sqaure root of a number
+D. floor() returns a closest value equal to an integer.
+
+D is answer
+PENDING
+
+33. What is the result of math.ceil(7.5) & math.floor(7.5)?
+
+A. 7 8
+B. 7 7
+C. 8 8
+D. 8 7
+
+D is answer
+
+
+34. What is the result of math.ceil(-7.5) & math.floor(-7.5)?
+
+A. -7 -8
+B. -7 -7
+C. -8 -8
+D. -8 -7
+
+A is answer
+
+35. What is the result of math.round(7.5), math.round(-7.5)?
+
+A. 8 -8
+B. 8 -7 
+C. 7 -8
+D. 7 -7
+
+B is answer
+
+
+
+
+
+
+

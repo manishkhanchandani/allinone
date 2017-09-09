@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script>
+//reversing a string
+function reverseString(str) {
+	console.log('str is ', str);
+	
+	var newString = '';
+	for(var i = str.length - 1; i >= 0; i--) {
+		console.log('i is ', i, ' and character at this point is ', str[i]);
+		newString = newString + str[i];
+	}
+	
+	return newString;
+}
+
+function reverseStr(str) {
+	return str.split('').reverse().join('');
+}
+
+var myStr = 'hello'; //olleh
+var rev = reverseStr(myStr);
+console.log('reverse is ', rev);
+</script>
+</head>
+
+<body>
+</body>
+</html>
